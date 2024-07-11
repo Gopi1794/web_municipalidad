@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700&display=swap');
+
+:root {
+    --color-1: #3e074a;
+    --color-2: #32c8f1;
+    --color-3: #bc50c2;
+    --color-4: #7c63cf;
+    --color-5: #882f8b;
+    --V: 1;
+    --f: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(../img/img-fondo-intendente/91649.jpg);
+    background-size: cover;
+}
+
+.session__login_registrer {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.container_all {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.box_back {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background: #2386b1;
+}
+
+.box_back div {
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.box_back div p,
+.box_back div button {
+    margin-top: 30px;
+}
+
+.box_back button {
+    background-color:  #60afd1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.box_back button:hover {
+    background-color: white;
+    color: #60afd1;
+}
+
+.container__login-resgister {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    transition: left 700ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.container__login-resgister form {
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow:0px 0px 76px 1px #2386b1;
+}
+
+.form__login {
+    opacity: 1;
+    display: block;
+}
+
+.form__registrer {
+    display: none;
+}
+
+.container__login-resgister form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2386b1;
+}
+
+.container__login-resgister input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: #2386b1 solid 1px;
+    background: rgb(221, 221, 221);
+    outline: none;
+}
+
+.container__login-resgister form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #2386b1;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    .session__login_registrer {
+        margin-top: 50px;
+    }
+
+    .box_back {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .box_back div {
+        margin: 0px;
+        position: absolute;
+    }
+
+    .container__login-resgister {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .container__login-resgister form {
+        position: relative;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="js/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="icon" type="image/x-icon" href="sv.ico" />
+    
+</head>
+<body>
+    <header>
+    </header>
+    
+    <div id="owl-demo" class="owl-carousel owl-theme">
+          
+        <div class="item"><img src="img/carrusel-indendente/01.jpg" alt="Owl Image"></div>
+        <div class="item"><img src="img/carrusel-indendente/02.jpg" alt="Owl Image"></div>
+        <div class="item"><img src="img/carrusel-indendente/03.jpg" alt="Owl Image"></div>
+        <div class="item"><img src="img/carrusel-indendente/04.jpg" alt="Owl Image"></div>
+       
+      </div>
+
+     <div class="container-intendente">
+      <div class="container-imagen">
+       <img src="img/nico (2).png" alt="intendente"> 
+      </div>
+      <h4>Intendente Municipal</h4>
+      <h1>Nicolas Mantegazza</h1>
+      <p>Nicolás Mantegazza nació y creció en Alejandro Korn, es profesor de Educación Física y deportista por naturaleza. Está casado con Daniela Lasalle y es papá de Juan Ignacio. Desde el 10 de diciembre de 2019, a través del voto popular, es el Intendente del distrito de San Vicente.<br>
+
+        <p>Desde muy joven, Nicolás se involucró de lleno con el desarrollo social y deportivo de niños, niñas y jóvenes y en el año 2006 junto a vecinos y vecinas del barrio Santa Ana, fundó el Club Estrella del Sur. Hoy, luego de 15 años, el Club Estrella del Sur continúa siendo un espacio para el crecimiento deportivo y humano de más de 500 niños, niñas y adolescentes.</p><br>
+        
+        <p>El próspero crecimiento del club lo incentivó a involucrarse aún más con el trabajo social y la militancia política. Es así como, en el año 2013, su tarea sin interrupciones, en la búsqueda de una mejor calidad de vida de sus vecinos, fundada en los valores del trabajo y realizada en conjunto con la comunidad, tuvo un merecido reconocimiento y fue elegido concejal por el Partido Justicialista. Su desempeño en el Honorable Concejo Deliberante le valió la reelección, en 2017, por Unidad Ciudadana, siendo luego designado presidente de su Bloque político.</p><br>
+        
+        <p>Durante esos años, acompañó el trabajo de las instituciones barriales y siguió escuchando de cerca las necesidades de los vecinos y las vecinas de su pueblo. Ya en 2019, Nicolás se postuló como candidato a Intendente y con el fuerte respaldo logrado en las elecciones de ese año, el 10 de diciembre asumió como Intendente Municipal de San Vicente.</p><br>
+        
+        <p>Hoy, Nicolás Mantegazza tiene un objetivo principal que es transformar San Vicente proyectando el distrito hacia los próximos 20 años. Llevar adelante una gestión donde la educación, la salud, la obra pública y la seguridad tengan un rol fundamental.</p><br>
+        
+        Trabajar para lograr un municipio autosustentable económicamente y con la infraestructura necesaria en materia de educación. Volver a poner al distrito en la agenda de la obra pública, ampliar la capacidad de los servicios municipales, brindar un servicio de salud integral para toda la comunidad y promover y afianzar la seguridad para sus habitantes. Al fin, que todos y todas podamos vivir en un distrito que nos de oportunidades y la posibilidad de realizarnos en una comunidad organizada.<br>
+        
+        “Llegué a la política convencido de que ésta es la mejor herramienta para transformar la vida de las personas y de los pueblos. Sabemos todo lo que falta por hacer y también que llevando una buena administración del Estado municipal y trabajando codo a codo con la comunidad estaremos en el camino de consolidar el San Vicente que soñamos en un futuro inmediato y que construiremos juntos para el bien de todas y todos.”<br>
+        Nicolás Mantegazza.</p>
+        
+     
+     <div id="owl-demo2" class="owl-carousel owl-theme" style="padding-top: 5px;">
+          
+      <div class="item"><img src="img/carrusel-indendente/Intendente-01.jpg" alt=""></div>
+      <div class="item"><img src="img/carrusel-indendente/Intendente-02.jpg" alt=""></div>
+      <div class="item"><img src="img/carrusel-indendente/Intendente-03.jpg" alt=""></div>
+      <div class="item"><img src="img/carrusel-indendente/Intendente-04.jpg" alt=""></div>
+      <div class="item"><img src="img/carrusel-indendente/Intendente-05.jpg" alt=""></div>
+      
+     
+    </div>
+  </div> 
+
+     
+    
+    <footer class="pie-pagina">
+    </footer>
+    <script>
+      //Navegation bar effects on scroll//
+
+window.addEventListener("scroll" , function(){
+const header = document.querySelector("header");
+header.classList.toggle("sticky" , window.scrollY > 0);
+});
+
+
+//Resposive navegation menu toggle
+
+const menuBtn = document.querySelector(".nav-menu-btn");
+const closeBtn = document.querySelector(".nav-close-btn");
+const navegation = document.querySelector(".navegation");
+
+menuBtn.addEventListener("click",  () =>{
+navegation.classList.add("active");
+});
+closeBtn.addEventListener("click",  () =>{
+navegation.classList.remove("active");
+});
+  </script>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/owl-carousel/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function() {
+ 
+ $("#owl-demo").owlCarousel({
+
+     autoPlay: 3000, //Set AutoPlay to 3 seconds
+     items : 1, 
+      itemsDesktop : 1,
+      itemsDesktopSmall : false,
+      itemsTablet: false,
+      itemsMobile : false, 
+      pagination :false
+
+ });
+
+ $(document).ready(function() {
+ 
+ $("#owl-demo2").owlCarousel({
+   navigation : false,
+   pagination :false,
+   autoPlay: 4000,
+   items : 3, 
+ });
+
+});
+
+});
+    </script>
+    <script src="js/extension.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
