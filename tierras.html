@@ -6,40 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="sv.ico" />
-    <title>Document</title>
+    <title>Casa Municipal de Tierras</title>
 </head>
 
 <body>
     <header>
     </header>
 
-    <div class="text-tierras">
+    <div class="container-intendente">
+        <br>
+        <br>
+        <br>
+        <br>
         <h1>Casa Municipal de Tierras</h1>
-        <p>Nicolás Mantegazza nació y creció en Alejandro Korn, es profesor
-            de Educación Física y deportista por naturaleza. Está casado con
-            Daniela Lasalle y es papá de Juan Ignacio. Desde el 10 de diciembre 
-            de 2019, a través del voto popular, es
-            el Intendente del distrito de San Vicente.</p>
-        </div>
-    <div class="container_modelos">
-        <div class="row">
-            <div class="col-1" style="background-color: aquamarine;">qwerty</div>
-            <div class="col-2" style="background-color: burlywood;">qwert</div>
-            <div class="col-1" style="background-color: #245677;">qwertyu</div>
-            <div class="col-2" style="background-color: aquamarine;">qwerty</div>
-            <div class="col-1" style="background-color: burlywood;">qwert</div>
-            <div class="col-2" style="background-color: #245677;">qwertyu</div>
-            <div class="col-1" style="background-color: aquamarine;">qwerty</div>
-            <div class="col-2" style="background-color: burlywood;">qwert</div>
-            <div class="col-1" style="background-color: #245677;">qwertyu</div>
+        <p>La Casa Municipal de Tierras es una nueva área dentro de la Municipalidad de San Vicente, la cual se dedica a
+            abordar la política de suelo y desarrollo urbano, generando lotes con servicios y viviendas, ampliando así
+            las oportunidades de acceso al suelo urbano, para que cada sanvicentino pueda cumplir el sueño de la casa
+            propia.
 
+            Gracias a la articulación con la Provincia de Buenos Aires, llevamos adelante nuestros primeros dos grandes
+            proyectos:</p>
+        <h4>Barrio Papa Francisco</h4>
+        <br>
+        <p>Creamos el Plan de Suelo Urbano que consta de una urbanización compuesta por 40 manzanas, con 24 lotes cada
+            una.
+
+            Ubicado en San Vicente, con su entrada en la Ruta Provincial N°6, este nuevo barrio cuenta con sus calles
+            consolidadas, veredas, cordón cuneta y servicios de luz led.
+
+            Este será uno de los primeros barrios perimetrados que contará con una garita de seguridad las 24 hs., con
+            una sola entrada de ingreso y egreso para mayor tranquilidad de nuestros vecinos</p>
+        <div class="container_modelos">
+            <div class="card-house">
+                <img src="img/fotos-tierras/AIME.jpg">
+            <div class="intro">
+                <h2>AIME</h2>
+                <p>"Casa moderna con líneas rectas y cochera cubierta, diseñada para la funcionalidad y el estilo urbano."</p>
+            </div>
+        </div>
+            <div class="card-house">
+                <img src="img/fotos-tierras/ALFONSINA.jpg">
+                <div class="intro">
+                    <h2>ALFONSINA</h2>
+                    <p>"Casa moderna con líneas rectas y cochera cubierta, diseñada para la funcionalidad y el estilo urbano."</p>
+                </div>
+            </div>
+            <div class="card-house">
+                <img src="img/fotos-tierras/BICENTENARIA.jpg">
+                <div class="intro">
+                    <h2>ALFONSINA</h2>
+                    <p>"Casa moderna con líneas rectas y cochera cubierta, diseñada para la funcionalidad y el estilo urbano."</p>
+                </div>
+            </div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: aquamarine;">qwerty</div>
+            <div style="background-color: burlywood;">qwert</div>
+            <div style="background-color: #245677;">qwertyu</div>
+            <div style="background-color: #245677;">qwertyu</div>
         </div>
     </div>
-
-    <footer class="pie-pagina">
-    </footer>
-
-<script src="js/extension.js"></script>
+        <footer class="pie-pagina">
+        </footer>
+        <script>
+            //Navegation bar effects on scroll//
+      
+      window.addEventListener("scroll" , function(){
+      const header = document.querySelector("header");
+      header.classList.toggle("sticky" , window.scrollY > 0);
+      });
+      
+      
+      //Resposive navegation menu toggle
+      
+      const menuBtn = document.querySelector(".nav-menu-btn");
+      const closeBtn = document.querySelector(".nav-close-btn");
+      const navegation = document.querySelector(".navegation");
+      
+      menuBtn.addEventListener("click",  () =>{
+      navegation.classList.add("active");
+      });
+      closeBtn.addEventListener("click",  () =>{
+      navegation.classList.remove("active");
+      });
+        </script>
+        <script src="js/extension.js"></script>
 </body>
 
 </html>
