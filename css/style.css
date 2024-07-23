@@ -1024,6 +1024,7 @@ header .nav-bar{
     overflow: hidden;
     text-align: justify;
     background: url(../img/img-fondo-intendente/91649.jpg) center center/cover;
+    background-attachment: fixed;
 }
 
 .container-intendente h1{
@@ -1049,6 +1050,16 @@ header .nav-bar{
 
 
 /*modelos de casas*/
+
+.card-house {
+    cursor: pointer;
+    display: inline-block;
+}
+.card-house img {
+    width: 100%;
+    height: auto;
+}
+
 .text-tierras h1 {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -1111,10 +1122,6 @@ header .nav-bar{
     transition: 0.5s;
 }
 
-.card-house {
-    cursor: pointer;
-}
-
 .card-house:hover .intro {
     height: 40%;
     background: rgba(0, 0, 0, 0.652);
@@ -1131,35 +1138,137 @@ header .nav-bar{
 }
 
 /* Estilo con rectángulos iguales */
-
-.card-house:nth-child(1) {
+.card-house:nth-child(n+1):nth-child(-n+66) {
     grid-column: span 2;
     grid-row: span 1;
 }
 
-.card-house:nth-child(2) {
-    grid-column: span 2;
-    grid-row: span 1;
+/* Media Queries para diferentes resoluciones */
+@media (max-width: 1200px) {
+    .container_modelos {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.card-house:nth-child(3) {
-    grid-column: span 2;
-    grid-row: span 1;
+@media (max-width: 1024px) {
+    .text-tierras h1 {
+        font-size: 35px;
+    }
+
+    .container_modelos {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.card-house:nth-child(4) {
-    grid-column: span 2;
-    grid-row: span 1;
+@media (max-width: 768px) {
+    .text-tierras h1 {
+        font-size: 30px;
+    }
+
+    .container_modelos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-house {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
-.card-house:nth-child(5) {
-    grid-column: span 2;
-    grid-row: span 1;
+@media (max-width: 480px) {
+    .text-tierras h1 {
+        font-size: 25px;
+    }
+
+    .container_modelos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-house {
+        margin-bottom: 15px;
+    }
 }
 
-.card-house:nth-child(6) {
-    grid-column: span 2;
-    grid-row: span 1;
+
+/*form*/
+
+.formulario{
+    font-family: Poppins;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50PX;
+
 }
 
-/* Puedes seguir agregando más estilos para las demás tarjetas */
+form{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgb(0, 0, 0 , 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    background-color: #1b629d;
+}
+
+
+.form-txt{
+    display: flex;
+    justify-content: space-between;
+}
+form h2 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.unput-group{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select {
+    background-color: #31a2ff;
+    padding: 20px 14px;
+    margin-bottom: 25px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+label{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+
+
+::placeholder {
+    color: #fff;
+    font-size: 15px;
+
+}
+
+
+:focus{
+    outline: 1px solid #ffffff;
+}
+
+.btn{
+    background-color: #10aecd;;
+    color:#fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+.btn:hover{
+    background: var(--body-bg-color);
+    color: #10aecd;
+    transition: 0.3s ease;
+    box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+-webkit-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+-moz-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+}
+
