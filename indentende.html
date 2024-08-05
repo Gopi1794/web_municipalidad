@@ -62,31 +62,10 @@
     
     <footer class="pie-pagina">
     </footer>
-    <script>
-      //Navegation bar effects on scroll//
-
-window.addEventListener("scroll" , function(){
-const header = document.querySelector("header");
-header.classList.toggle("sticky" , window.scrollY > 0);
-});
-
-
-//Resposive navegation menu toggle
-
-const menuBtn = document.querySelector(".nav-menu-btn");
-const closeBtn = document.querySelector(".nav-close-btn");
-const navegation = document.querySelector(".navegation");
-
-menuBtn.addEventListener("click",  () =>{
-navegation.classList.add("active");
-});
-closeBtn.addEventListener("click",  () =>{
-navegation.classList.remove("active");
-});
-  </script>
-    
+    <script src="js/menu.js"></script>
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/owl-carousel/owl.carousel.js"></script>
+
     <script>
         $(document).ready(function() {
  

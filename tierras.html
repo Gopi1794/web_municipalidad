@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="sv.ico" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     <title>Casa Municipal de Tierras</title>
 </head>
@@ -475,6 +476,7 @@
                 <BR>
                     <input type="hidden" name="_subject" value="Nuevo mensaje del formulario de contacto">
                     <input type="hidden" name="_captcha" value="false"> <!-- Deshabilita captcha si no es necesario -->
+                    <input type="hidden" name="_next" value="https://municipalidad-97bb7.web.app/tierras.html"> <!-- Reemplaza URL_DE_LA_MISMA_PAGINA con la URL de la página actual -->
                     <div class="unput-group">
                         <input type="text" name="name" placeholder="Nombre" required>
                         <input type="tel" name="phone" placeholder="Teléfono" required>
@@ -530,36 +532,19 @@
 
         <footer class="pie-pagina">
         </footer>
-        <script>
-            //Navegation bar effects on scroll//
-      
-      window.addEventListener("scroll" , function(){
-      const header = document.querySelector("header");
-      header.classList.toggle("sticky" , window.scrollY > 0);
-      });
-      
-      
-      //Resposive navegation menu toggle
-      
-      const menuBtn = document.querySelector(".nav-menu-btn");
-      const closeBtn = document.querySelector(".nav-close-btn");
-      const navegation = document.querySelector(".navegation");
-      
-      menuBtn.addEventListener("click",  () =>{
-      navegation.classList.add("active");
-      });
-      closeBtn.addEventListener("click",  () =>{
-      navegation.classList.remove("active");
-      });
-        </script>
+        
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
     <script>
         Fancybox.bind("[data-fancybox]", {
             // Opciones personalizadas si es necesario
         });
     </script>
+    
         <script src="js/extension.js"></script>
+        <script src="js/menu.js"></script>
 </body>
 
 </html>

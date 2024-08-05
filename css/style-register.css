@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700&display=swap');
 
-:root {
-    --color-1: #3e074a;
-    --color-2: #32c8f1;
-    --color-3: #bc50c2;
-    --color-4: #7c63cf;
-    --color-5: #882f8b;
-    --V: 1;
-    --f: 1;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -18,8 +8,84 @@
 }
 
 body {
-    background-image: url(../img/img-fondo-intendente/91649.jpg);
+    background-image: url(../img/img-fondo-intendente/fondo-geometria-abstracta-moderno-fondo-pantalla-claro-banner-web-presentacion_752732-47.jpg) ;
     background-size: cover;
+    position: sticky;
+
+}
+
+
+/*INCIO*/
+header {
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    background-color: #ffffffc6;
+}
+header.sticky {
+    position: sticky;
+    height: calc(2.5rem + 2rem);
+    background: rgba(255, 255, 255, 0.457);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 162, 255, 0.848);
+}
+
+
+.primer{
+    background-color:rgba(220, 219, 219, 0.404);
+    box-shadow:0px 0px 1px 1px #2386b1;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    margin: 50px 50px;
+    border-radius: 20px;
+    margin-top: 100px;
+    
+}
+h2 ,h3{
+    color: #2386b1;
+}
+
+.primer p{
+    margin: 10px;
+}
+
+.search {
+    width: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: #2386b1 solid 1px;
+    background: rgb(221, 221, 221);
+    outline: none;
+}
+
+.tramite-login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primer button{
+    background-color:  #60afd1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+}
+
+.button-buscar {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #2386b1;
+    color: white;
+    cursor: pointer;
 }
 
 .session__login_registrer {
@@ -128,9 +194,125 @@ body {
     cursor: pointer;
 }
 
+/*LOGO MI SANVICENTE*/
+
+.cabeza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-bar {
+    background-color: rgba(226, 232, 237, 0.6); /* semi-transparente */
+    width: 100%;
+    height: calc(2.5rem + 2rem);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 1px 1px #2386b1;
+}
+
+.logo {
+    position: absolute;
+    left: 20px; /* Ajusta según sea necesario */
+    z-index: 100;
+}
+
+.menu-container {
+    margin-left: auto; /* Empujar el menú al final */
+    display: flex;
+    align-items: center;
+}
+
+.btn-menu {
+    font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
+    cursor: pointer;
+}
+
+.container-menu {
+    position: relative;
+}
+
+.cont-menu {
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    background-color:#31a2ff;
+    transform: translateX(80px);
+}
+
+.cont-menu nav ul li {
+    list-style: none;   
+}
+
+.cont-menu nav ul li a{
+    float: left;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    transition: 0.2s ease;
+    
+}
+
+.cont-menu nav i {
+    font-size: 30px;
+    margin-right: 8px; 
+}
+
+.cont-menu nav ul li a:hover{
+    background-color:#2386b1;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 10px
+}
+
+
+.cont-menu nav img{
+    width: 300px;
+    padding-top: 100px;
+}
+
+.cont-menu.active {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.nav-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(229, 72, 72);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/*RESPONSIVE*/
+
+
 @media screen and (max-width: 850px) {
     .session__login_registrer {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .box_back {
