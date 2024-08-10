@@ -70,11 +70,11 @@ header.sticky {
 }
 
 .primer button{
-    background-color:  #60afd1;
+    background-color:#31a2ff;
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -243,7 +243,7 @@ header.sticky {
     
 }
 
-.datos input {
+.datos input , textarea{
     
     margin-right: 10px;
     padding: 5px;
@@ -269,9 +269,7 @@ select {
     color: #ffffff;
 }
 
-.hidden {
-    display: none;
-}
+
 
 /* Para navegadores WebKit (Chrome, Safari) */  
 input[type=number]::-webkit-inner-spin-button,  
@@ -284,3 +282,46 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {  
     -moz-appearance: textfield; /* Elimina el spinner */  
 }  
+
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 1px 1px #2386b1;
+}
+
+.progress {
+    height: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.5s;
+}
+
+.bg-success {
+    background-color: #28a745;
+}
+
+.bg-warning {
+    background-color: #ffc107;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+}
+
+
+.datos button:hover{
+    background: var(--body-bg-color);
+    color: #10aecd;
+    transition: 0.3s ease;
+    box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+-webkit-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+-moz-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+}
+

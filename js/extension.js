@@ -39,7 +39,7 @@ cabeza.innerHTML = `
                       </li>
                       <li><a href="#"><i class="uil uil-sign-alt"></i>Guia de tramites</a>
                         <ul>
-                          <li><a href="#">Registro Municipal Unico y Permanente de Demanda Habitacional</a></li>
+                          <li><a href="misanvicente/index.html">Registro Municipal Unico y Permanente de Demanda Habitacional</a></li>
                           <li><a href="#">Direccion de Comercio</a></li>
                           <li><a href="#">Direccion de renta</a></li>
                           <li><a href="#">Reclamos de Servicios Publicos</a></li>
@@ -138,13 +138,3 @@ C.P.: 1865 / 02225 48-1101<br>
 </div>
 
 `;
-
-
-
-
-
-
-
-
-
-

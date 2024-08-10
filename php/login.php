@@ -1,21 +1,3 @@
-<?php
-
-$servidor="localhost";
-$usuario="root";
-$clave="";
-$baseDeDatos="login_register_bd";
-
-$conexion = mysqli_connect ("localhost" , "root" , "" , "login_register_bd");
-
-//prueba de conexion
-/*
-if($conexion){
-    echo "Conectado exitosamente a la base de datos";
-}else{
-    echo "No se a podido conectar a la base de datos";
-} */
-?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,17 +6,48 @@ if($conexion){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style-register.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Login y Registro</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <title>Registro - Mi San Vicente</title>
+
+    <?php
+                    include("conexion.php");
+                    include("registro_usuarios_be.php")
+                    ?>
 </head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA4XJamwnbKkWDMapKAdDeTFmWk9WtI4w&libraries=places"></script>
+
 <body>
-    <header>
-    <div class="nav-bar">
-        <a href="../misanvicente/index.html" class="logo"><img src="../img/logoMiSanVicente.png"></a>
-    </div>
-    <section class="session__login_registrer">
+    <header class="cabeza">
+        <div class="nav-bar">
+            <a href="../misanvicente/index.html" class="logo"><img src="../img/logoMiSanVicente.png" alt="Logo"></a>
+            <div class="menu-container">
+                <div class="btn-menu">
+                    <i class="uil uil-align-right-justify nav-menu-btn-miSanvi"></i>
+                </div>
+            </div>
+        </div>
     </header>
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="uil uil-signin"></i>INGRESAR</a>
+                        <li><a href="../php/login.html"><i class="uil uil-plus"></i>CREAR CUENTA</a>
+                        <li><a href="#"><i class="uil uil-files-landscapes-alt"></i>TRAMITES</a>
+                        <li><a href="#"><i class="uil uil-message"></i>ENVIAR CONSULTA</a>
+                    </ul>
+                    <a href="../index.html" class="logo-principal"><img src="../img/logomenu.png" alt="Logo"></a>
+                </nav>
+                <i class="uil uil-multiply nav-close-btn"></i>
+            </div>
+        </div>
         <!--Contenedor general-->
         <div class="primer">
             <h2>CREAR CUENTA</h2>
@@ -42,30 +55,26 @@ if($conexion){
             <div class="primer">
                 <h3>Datos Personales</h3>
                 <hr>
-                <form action="POST">
+                <form action="" method="POST">                  
                 <div class="datos">       
                      <label for="numero">DNI:</label> 
-                     <input type="number" maxlength="8" id="dni1" name="DNI" required>
+                     <input type="number" id="dni1" name="dni" min="0" max="99999999" required>
                     </div>
                      <div class="datos">        
                         <label for="numero">CUIL:</label> 
-                        <input type="number" class="input-small" maxlength="2" id="input1" name="CUIL1" required>
-                        <input type="number" class="input-normal" id="dni2" name="CUIL2" required>
-                        <input type="number" class="input-small" maxlength="2" id="input3" name="CUIL3" required>
+                        <input type="number" class="input-small" maxlength="2" id="input1" name="cuil1" required>
+                        <input type="number" class="input-normal" id="dni2" name="cuil2" required>
+                        <input type="number" class="input-small" maxlength="2" id="input3" name="cuil3" required>
                     </div>
                     
-                        <div class="datos">
-                            <label for="numero">CLAVE:</label> 
-                            <input type="password" id="progressInput" name="inputName" class="form-control" placeholder="INGRESE SU CLAVE" PA>
-                        </div>
-                        <span>Longitud de 8 caracteres /
-                            2 letras en mayúsculas /
-                            1 Carácter especial (!@#$&*) /
-                            2 números (0-9) /
-                            3 letras en minúsculas.</span>
-                        <div class="progress mt-3">
-                            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
-                        </div>
+                    <div class="datos">
+                        <label for="numero">CLAVE:</label>
+                        <input type="password" id="progressInput" name="contrasena" class="form-control" placeholder="INGRESE SU CLAVE" required>
+                    </div>
+                    <span>Longitud de 8 caracteres / 2 letras en mayúsculas / 1 Carácter especial (!@#$&*) / 2 números (0-9) / 3 letras en minúsculas.</span>
+                    <div class="progress mt-3">
+                        <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                    </div>
                     
                         <div class="datos">       
                             <label for="numero">APELLIDO:</label> 
@@ -79,7 +88,7 @@ if($conexion){
 
                            <div class="datos">       
                             <label for="numero">FECHA DE NACIMIENTO:</label> 
-                            <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento" required>
+                            <input type="date" id="fechaDeNacimiento" name="nacimiento" required>
                            </div>
 
                            <div class="datos">       
@@ -93,14 +102,14 @@ if($conexion){
                            </div>
 
                            <div class="datos">       
-                            <label for="numero">E-MAIL:</label> 
+                            <label for="numero">E-MAIL:</label>
                             <input type="email" id="email" name="email" required>
                            </div>
 
 
                            <div class="datos">       
                             <label for="numero">REPETIR E-MAIL:</label> 
-                            <input type="email" id="repitEmail" name="repitEmail" required>
+                            <input type="email" id="repitEmail" name="repEmail" required>
                            </div>
                     </div>
 
@@ -108,15 +117,20 @@ if($conexion){
                         <h3>Residencia</h3>
                 <hr>
 
-                <div class="datos">       
+                <div class="datos">  
+                    <div class="pais" id="pais">
                     <label for="numero">PAIS:</label> 
-                    <input type="email" id="pais" name="pais" required>
+                    <input type="text" id="pais" name="pais" value="ARGENTINA">
+                </div>     
                     <p>OTRO PAIS <input type="checkbox" id="otroPaisCheckbox"></p>
+                    <div class="datos" id="otropais"> 
+                    <input type="text" id="otropais" name="otropais" placeholder="PAIS DE RESIDENCIA" required>
+                </div>
                 </div>
             
                 <div class="datos" id="provinciaDiv">
                     <label for="numero">PROVINCIA:</label> 
-                    <select name="prov_id" id="prov_id">
+                    <select name="provincia" id="prov_id" required>
                         <option selected="selected" value="1">Buenos Aires</option>
                         <option value="2">CABA</option>
                         <option value="3">Catamarca</option>
@@ -146,7 +160,7 @@ if($conexion){
             
                 <div class="datos" id="municipalidadDiv">
                     <label for="numero">MUNICIPALIDAD:</label> 
-                    <select name="mun_id" id="mun_id">
+                    <select name="municipalidad" id="mun_id" onchange="showHideInputs()">
                         <option value="104">ADOLFO ALSINA</option>
                         <option value="59">ALBERTI</option>
                         <option value="40">ALMIRANTE BROWN</option>
@@ -266,7 +280,7 @@ if($conexion){
                         <option value="20">SAN MIGUEL</option>
                         <option value="37">SAN NICOLAS</option>
                         <option value="38">SAN PEDRO</option>
-                        <option selected="selected" value="58">SAN VICENTE</option>
+                        <option id="selected" value="58">SAN VICENTE</option>
                         <option value="21">SUIPACHA</option>
                         <option value="102">TANDIL</option>
                         <option value="132">TAPALQUE</option>
@@ -285,64 +299,122 @@ if($conexion){
                 </div>
             
                 <div class="datos" id="localidadDiv">
-                    <label for="numero">LOCALIDAD:</label> 
-                    <select name="loc_id" id="loc_id">
+                    <label for="loc_id">LOCALIDAD:</label> 
+                    <select name="localidad" id="loc_id">
                         <option value="1">ALEJANDRO KORN</option>
                         <option value="3">DOMSELAAR</option>
                         <option value="2">SAN VICENTE</option>
                     </select>
                 </div>
-                          
+            
+                <div class="datos">       
+                    <label for="calle">CALLE:</label> 
+                    <input type="text" id="calle" name="calle" required>
+                    <label for="entreCalle">ENTRE CALLE:</label> 
+                    <input type="text" id="entreCalle" name="entreCalle" required>
+                    <label for="altura">ALTURA:</label> 
+                    <input type="text" id="altura" name="altura" required>
+                    <button id="searchButton">Buscar en Mapa</button>
+                </div>
+                <div id="map"></div>
+
+                <div class="datos">  
+                    <div class="piso" id="piso">
+                    <label for="numero">PISO:</label> 
+                    <input type="text" id="piso" name="piso" >
+                    <br>
+                    <br>
+                    <label for="numero">DEPTO:</label> 
+                    <input type="text" id="depto" name="depto">
+                </div>   
+
+                
+                </div>
+
+                <div class="datos">  
+                    <div class="observacion" id="observacion">
+                    <label for="numero">OBSERVACION PARA ENCONTRAR MEJOR SU UBICACION:</label>
+                    <br>
+                    <textarea name="per_observacion" rows="2" cols="30"></textarea>
+                </div> 
     </div>
 
-</form>
-                    </div>
+                <div class="datos" >
+                <div class="registrar">
+                    <input style="justify-content: right; margin: 20px; padding:20px; border-radius: 15px; width: auto ;color:aliceblue; background-color:#10aecd ; box-shadow: 0px 0px 1px 1px #2386b1"type="submit" value="Registrar" name="registro">
+                </div>
+                </div>
+
+                    
+
+
         </div>
-    </section>
+
     <script>
-        const progressInput = document.getElementById('progressInput');
-        const progressBar = document.getElementById('progressBar');
+        document.addEventListener('DOMContentLoaded', function() {
+    const progressInput = document.getElementById('progressInput');
+    const progressBar = document.getElementById('progressBar');
 
-        const moderate = /(?=.*[A-Z])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[A-Z])(?=.*[a-z]).{5,}/;
-        const strong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[\d]).{7,}|(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=.*[\d]).{7,}/;
-        const extraStrong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?]).{9,}/;
+    const moderate = /(?=.*[A-Z])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[A-Z])(?=.*[a-z]).{5,}/;
+    const strong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[\d]).{7,}|(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=.*[\d]).{7,}/;
+    const extraStrong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?]).{9,}/;
 
-        progressInput.addEventListener('input', function() {
-            const threshold = 10; // Número de caracteres que llenan la barra al 100%
-            const inputLength = progressInput.value.length;
+    progressInput.addEventListener('input', function() {
+        const threshold = 10; // Número de caracteres que llenan la barra al 100%
+        const inputLength = progressInput.value.length;
 
-            // Calcula el progreso basado en la longitud del texto
-            let progress = 0;
-            if (inputLength >= threshold) {
-                progress = 100;
-            } else {
-                progress = (inputLength / threshold) * 100;
-            }
+        // Calcula el progreso basado en la longitud del texto
+        let progress = 0;
+        if (inputLength >= threshold) {
+            progress = 100;
+        } else {
+            progress = (inputLength / threshold) * 100;
+        }
 
-            // Actualiza el ancho y el atributo aria-valuenow de la barra de progreso
-            progressBar.style.width = progress + '%';
-            progressBar.setAttribute('aria-valuenow', progress);
+        // Actualiza el ancho y el atributo aria-valuenow de la barra de progreso
+        progressBar.style.width = progress + '%';
+        progressBar.setAttribute('aria-valuenow', progress);
 
-            // Elimina las clases actuales
-            progressBar.classList.remove("bg-success", "bg-warning", "bg-danger");
+        // Elimina las clases actuales
+        progressBar.classList.remove("bg-success", "bg-warning", "bg-danger");
 
-            // Determina la fortaleza de la contraseña y cambia la clase en consecuencia
-            const value = progressInput.value;
-            if (extraStrong.test(value)) {
-                progressBar.classList.add("bg-success"); // Verde para contraseñas muy fuertes
-            } else if (strong.test(value)) {
-                progressBar.classList.add("bg-warning"); // Amarillo para contraseñas fuertes
-            } else if (moderate.test(value)) {
-                progressBar.classList.add("bg-danger"); // Rojo para contraseñas moderadas
-            } else {
-                progressBar.classList.add("bg-danger"); // Rojo para contraseñas débiles o vacías
-            }
-        });
+        // Determina la fortaleza de la contraseña y cambia la clase en consecuencia
+        const value = progressInput.value;
+        if (extraStrong.test(value)) {
+            progressBar.classList.add("bg-success"); // Verde para contraseñas muy fuertes
+        } else if (strong.test(value)) {
+            progressBar.classList.add("bg-warning"); // Amarillo para contraseñas fuertes
+        } else if (moderate.test(value)) {
+            progressBar.classList.add("bg-danger"); // Rojo para contraseñas moderadas
+        } else {
+            progressBar.classList.add("bg-danger"); // Rojo para contraseñas débiles o vacías
+        }
+    });
+});
     </script>
-    <script src="../js/password.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+const menuBtnMiSanvicente = document.querySelector(".nav-menu-btn-miSanvi");
+const closeBtnMiSanvicente = document.querySelector(".nav-close-btn");
+const navegationMiSanVicente = document.querySelector(".cont-menu");
+
+menuBtnMiSanvicente.addEventListener("click", () => {
+navegationMiSanVicente.classList.add("active");
+});
+
+closeBtnMiSanvicente.addEventListener("click", () => {
+navegationMiSanVicente.classList.remove("active");
+});
+});
+</script>
+        <script src="../js/menu.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/password.js"></script>
+
+  
 </body>
 
 </html>
