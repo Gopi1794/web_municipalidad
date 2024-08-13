@@ -1,4 +1,7 @@
-
+  <?php
+                    include("conexion.php");
+                    include("registro_usuarios_be.php")
+                    ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,10 +19,7 @@
     </style>
     <title>Registro - Mi San Vicente</title>
 
-    <?php
-                    include("conexion.php");
-                    include("registro_usuarios_be.php")
-                    ?>
+  
 </head>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA4XJamwnbKkWDMapKAdDeTFmWk9WtI4w&libraries=places"></script>
 
