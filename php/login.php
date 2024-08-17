@@ -1,6 +1,6 @@
   <?php
                     include("conexion.php");
-                    include("registro_usuarios_be.php")
+                    include("registro_usuarios_be.php");
                     ?>
 <!DOCTYPE html>
 <html lang="es">
