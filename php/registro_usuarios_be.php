@@ -154,3 +154,7 @@ if (mysqli_stmt_affected_rows($stmt) > 0) {
 mysqli_stmt_close($stmt);
 mysqli_close($conexion);
 ?>
+
+
+
+// PUEDE QUE LAS INSERCIÓN SEAN REDUNDANTES
