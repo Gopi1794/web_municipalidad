@@ -1,7 +1,11 @@
-  <?php
-                    include("conexion.php");
-                    include("registro_usuarios_be.php");
-                    ?>
+<?php
+
+include 'conexion.php';
+include 'registro_usuarios_be.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,16 +16,20 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Registro - Mi San Vicente</title>
+
     <style>
         .hidden {
             display: none;
         }
     </style>
-    <title>Registro - Mi San Vicente</title>
+   
 
   
 </head>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA4XJamwnbKkWDMapKAdDeTFmWk9WtI4w&libraries=places"></script>
+
 
 <body>
     <header class="cabeza">
@@ -55,45 +63,47 @@
             <div class="primer">
                 <h3>Datos Personales</h3>
                 <hr>
-                <form action="" method="POST">                  
+                <form action="registro_usuarios_be.php" method="post">                  
                 <div class="datos">       
-                     <label for="numero">DNI:</label> 
-                     <input type="number" id="dni1" name="dni" min="0" max="99999999" required>
+                     <label for="dni1">DNI:</label> 
+                     <input type="number" id="dni1" name="dni" min="0" max="99999999" title="DNI de la persona que se registra 'SIN PUNTOS'" required>
                     </div>
                      <div class="datos">        
-                        <label for="numero">CUIL:</label> 
-                        <input type="number" class="input-small" maxlength="2" id="input1" name="cuil1" required>
-                        <input type="number" class="input-normal" id="dni2" name="cuil2" required>
-                        <input type="number" class="input-small" maxlength="2" id="input3" name="cuil3" required>
+                        <label for="cuil2">CUIL:</label> 
+                        <input type="number" class="input-small" maxlength="2" id="input1" name="cuil1" title="Por ejemplo: 20 para mujeres y 27 para hombres" required>
+                        <input type="number" class="input-normal" id="dni2" name="cuil2" title="Se rellena con tu DNI" required>
+                        <input type="number" class="input-small" maxlength="2" id="input3" name="cuil3" title="Aca va el codigo verificador" required>
                     </div>
                     
                     <div class="datos">
-                        <label for="numero">CLAVE:</label>
-                        <input type="password" id="progressInput" name="contrasena" class="form-control" placeholder="INGRESE SU CLAVE" required>
+                        <label for="contrasena">CLAVE:</label>
+                        <input type="password" id="contrasena" name="contrasena" class="form-control" title="Crea una clave de acceso" placeholder="INGRESE SU CLAVE" required>
                     </div>
-                    <span>Longitud de 8 caracteres / 2 letras en mayúsculas / 1 Carácter especial (!@#$&*) / 2 números (0-9) / 3 letras en minúsculas.</span>
+                    <p>Longitud de 8 caracteres : 2 letras en mayúsculas / 1 Carácter especial (!@#$&*) / 2 números (0-9) / 3 letras en minúsculas.</p>
+                    
+                    <!-- Barra de progreso para la fortaleza de la contraseña -->
                     <div class="progress mt-3">
                         <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
                     </div>
                     
                         <div class="datos">       
-                            <label for="numero">APELLIDO:</label> 
-                            <input type="text" id="apellido" name="apellido" required>
+                            <label for="apellido">APELLIDO:</label> 
+                            <input type="text" id="apellido" name="apellido" title="Apellido de la persona que se registra" required>
                            </div>
 
                            <div class="datos">       
-                            <label for="numero">NOMBRE:</label> 
-                            <input type="text" id="nombre" name="nombre" required>
+                            <label for="nombre">NOMBRE:</label> 
+                            <input type="text" id="nombre" name="nombre" title="Nombre de la persona que se registra" required>
                            </div>
 
                            <div class="datos">       
-                            <label for="numero">FECHA DE NACIMIENTO:</label> 
-                            <input type="date" id="fechaDeNacimiento" name="nacimiento" required>
+                            <label for="fechaDeNacimiento">FECHA DE NACIMIENTO:</label> 
+                            <input type="date" id="fechaDeNacimiento" title="Fecha de nacimiento de la persona que se registra" name="fechaDeNacimiento" required>
                            </div>
 
                            <div class="datos">       
-                            <label for="numero">GENERO:</label> 
-                            <select id="genero" name="genero" required>
+                            <label for="genero">GENERO:</label> 
+                            <select id="genero" name="genero" title="Seleccione un opcion con la que se indentifique" required>
                                 <option value="MASCULINO">MASCULINO</option>
                                 <option value="FEMENINO">FEMENINO</option>
                                 <option value="NO BINARIO">NO BINARIO</option>
@@ -102,14 +112,14 @@
                            </div>
 
                            <div class="datos">       
-                            <label for="numero">E-MAIL:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">E-MAIL:</label>
+                            <input type="email" id="email" name="email" title="Ingrese su mail" required>
                            </div>
 
 
                            <div class="datos">       
-                            <label for="numero">REPETIR E-MAIL:</label> 
-                            <input type="email" id="repitEmail" name="repEmail" required>
+                            <label for="repitEmail">REPETIR E-MAIL:</label> 
+                            <input type="email" id="repitEmail" name="repEmail" title="Vuelva a ingresar su mail" required>
                            </div>
                     </div>
 
@@ -118,19 +128,19 @@
                 <hr>
 
                 <div class="datos">  
-                    <div class="pais" id="pais">
-                    <label for="numero">PAIS:</label> 
-                    <input type="text" id="pais" name="pais" value="ARGENTINA">
+                    <div class="pais">
+                    <label for="pais">PAIS:</label> 
+                    <input type="text" id="pais" name="pais" value="ARGENTINA" title="Coloque su pais de residencia">
                 </div>     
-                    <p>OTRO PAIS <input type="checkbox" id="otroPaisCheckbox"></p>
+                    <p>OTRO PAIS <input type="checkbox" id="otroPaisCheckbox" title="Marque la casilla si no vive en ARGENTINA"></p>
                     <div class="datos" id="otropais"> 
-                    <input type="text" id="otropais" name="otropais" placeholder="PAIS DE RESIDENCIA" required>
+                    <input type="text" id="otropais" name="otropais" placeholder="PAIS DE RESIDENCIA" title="Coloque su pais de residencia">
                 </div>
                 </div>
             
                 <div class="datos" id="provinciaDiv">
-                    <label for="numero">PROVINCIA:</label> 
-                    <select name="provincia" id="prov_id" required>
+                    <label for="prov_id">PROVINCIA:</label> 
+                    <select name="provincia" id="prov_id" required title="Elija la provincia en la que vive">
                         <option selected="selected" value="1">Buenos Aires</option>
                         <option value="2">CABA</option>
                         <option value="3">Catamarca</option>
@@ -159,8 +169,8 @@
                 </div>
             
                 <div class="datos" id="municipalidadDiv">
-                    <label for="numero">MUNICIPALIDAD:</label> 
-                    <select name="municipalidad" id="mun_id" onchange="showHideInputs()">
+                    <label for="mun_id">MUNICIPALIDAD:</label> 
+                    <select name="municipalidad" id="mun_id" onchange="showHideInputs()" title="Elija la municipalidad en la que vive">
                         <option value="104">ADOLFO ALSINA</option>
                         <option value="59">ALBERTI</option>
                         <option value="40">ALMIRANTE BROWN</option>
@@ -300,32 +310,37 @@
             
                 <div class="datos" id="localidadDiv">
                     <label for="loc_id">LOCALIDAD:</label> 
-                    <select name="localidad" id="loc_id">
+                    <select name="localidad" id="loc_id" title="Elija la muncipalidad en la que vive">
                         <option value="1">ALEJANDRO KORN</option>
                         <option value="3">DOMSELAAR</option>
                         <option value="2">SAN VICENTE</option>
                     </select>
                 </div>
             
-                <div class="datos">       
+                <div class="datos">  
+                <div class="direccion">     
                     <label for="calle">CALLE:</label> 
-                    <input type="text" id="calle" name="calle" required>
+                    <input type="text" id="calle" name="calle" title="Ingrese la calle en la que vive" required>
+                    <br>
                     <label for="entreCalle">ENTRE CALLE:</label> 
-                    <input type="text" id="entreCalle" name="entreCalle" required>
+                    <input type="text" id="entreCalle" name="entreCalle" title="Ingrese una de las calles en la que vive" required>
+                    <br>
                     <label for="altura">ALTURA:</label> 
-                    <input type="text" id="altura" name="altura" required>
-                    <button id="searchButton">Buscar en Mapa</button>
+                    <input type="text" id="altura" name="altura" title="Ingrese la altura de la calle en la que vive" required>                    
+                    <br>
+                    <button id="searchButton" type="button">Buscar</button>
+                    </div>
                 </div>
                 <div id="map"></div>
 
                 <div class="datos">  
-                    <div class="piso" id="piso">
-                    <label for="numero">PISO:</label> 
-                    <input type="text" id="piso" name="piso" >
+                    <div class="piso">
+                    <label for="piso">PISO:</label> 
+                    <input type="text" id="piso" name="piso" title="Ingrese el piso en el que vive en el caso que sea necesario">
                     <br>
                     <br>
-                    <label for="numero">DEPTO:</label> 
-                    <input type="text" id="depto" name="depto">
+                    <label for="depto">DEPTO:</label> 
+                    <input type="text" id="depto" name="depto" title="Ingrese el departamento en el que vive en el caso que sea necesario" >
                 </div>   
 
                 
@@ -333,26 +348,26 @@
 
                 <div class="datos">  
                     <div class="observacion" id="observacion">
-                    <label for="numero">OBSERVACION PARA ENCONTRAR MEJOR SU UBICACION:</label>
+                    <label for="per_observacion">OBSERVACION PARA ENCONTRAR MEJOR SU UBICACION:</label>
                     <br>
-                    <textarea name="per_observacion" rows="2" cols="30"></textarea>
+                    <textarea name="per_observacion" id="observacion" rows="2" cols="30" title="Haga una descripcion de su persona si es necesario"></textarea>
                 </div> 
     </div>
 
                 <div class="datos" >
                 <div class="registrar">
-                    <input style="justify-content: right; margin: 20px; padding:20px; border-radius: 15px; width: auto ;color:aliceblue; background-color:#10aecd ; box-shadow: 0px 0px 1px 1px #2386b1"type="submit" value="Registrar" name="registro">
+                    <input style="justify-content: right; margin: 20px; padding:20px; border-radius: 15px; width: auto ;color:aliceblue; background-color:#10aecd ; box-shadow: 0px 0px 1px 1px #2386b1"type="submit" value="Registrar" name="submit">
                 </div>
                 </div>
 
-                    
-
+                </form>
 
         </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const progressInput = document.getElementById('progressInput');
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const progressInput = document.getElementById('contrasena');
     const progressBar = document.getElementById('progressBar');
 
     const moderate = /(?=.*[A-Z])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[A-Z])(?=.*[a-z]).{5,}/;
@@ -382,16 +397,21 @@
         const value = progressInput.value;
         if (extraStrong.test(value)) {
             progressBar.classList.add("bg-success"); // Verde para contraseñas muy fuertes
+            progressBar.textContent = "Segura"; // Texto: Segura
         } else if (strong.test(value)) {
             progressBar.classList.add("bg-warning"); // Amarillo para contraseñas fuertes
+            progressBar.textContent = "Moderada"; // Texto: Moderada
         } else if (moderate.test(value)) {
             progressBar.classList.add("bg-danger"); // Rojo para contraseñas moderadas
+            progressBar.textContent = "Débil"; // Texto: Débil
         } else {
             progressBar.classList.add("bg-danger"); // Rojo para contraseñas débiles o vacías
+            progressBar.textContent = "Débil"; // Texto: Débil
         }
     });
 });
-    </script>
+
+            </script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -409,10 +429,11 @@ navegationMiSanVicente.classList.remove("active");
 });
 </script>
         <script src="../js/menu.js"></script>
+        <script src="../js/password.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="../js/login.js"></script>
-    <script src="../js/password.js"></script>
+   
 
   
 </body>

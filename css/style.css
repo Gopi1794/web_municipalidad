@@ -1028,7 +1028,7 @@ header .nav-bar{
 }
 
 .container-intendente h1{
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 1rem;
     font-size: 50px
 }
@@ -1229,10 +1229,11 @@ header .nav-bar{
 form{
     padding: 50px 55px;
     box-shadow: 0 0 20px rgb(0, 0, 0 , 0.2);
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     width: 113%;
-    background-color: #1b629d;
+    background-color: #8c8c8c7a;
+    box-shadow:0px 0px 1px 1px #2386b1;
 }
 
 
@@ -1241,7 +1242,7 @@ form{
     justify-content: space-between;
 }
 form h2 {
-    color: #ffffff;
+    color: #393939;
     font-size: 25px;
     margin-bottom: 20px;
 }
@@ -1252,35 +1253,35 @@ form h2 {
 }
 
 input, textarea, select {
-    background-color: #31a2ff;
+    background-color: #ffffff;
     padding: 20px 14px;
     margin-bottom: 25px;
     border: 0;
     border-radius: 20px;
     font-size: 20px;
-    color: #ffffff;
+    color: #030303;
 }
 
 label{
     font-size: 20px;
-    color: #ffffff;
+    color: #5d5d5d;
 }
 
 
 
 ::placeholder {
-    color: #fff;
+    color: #000000;
     font-size: 15px;
 
 }
 
 
 :focus{
-    outline: 1px solid #ffffff;
+    outline: 0.5px solid #2386b1;
 }
 
 .btn{
-    background-color: #10aecd;;
+    background-color: #2386b1;;
     color:#fff;
     font-size: 17px;
     cursor: pointer;
@@ -1291,8 +1292,8 @@ label{
     background: var(--body-bg-color);
     color: #10aecd;
     transition: 0.3s ease;
-    box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
--webkit-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
--moz-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+    box-shadow: 3px 3px 20px 10px rgba(16,174,205,1);
+-webkit-box-shadow: 3px 3px 20px 10px rgba(16,174,205,1);
+-moz-box-shadow: 3px 3px 20px 10x rgba(16,174,205,1);
 }
 

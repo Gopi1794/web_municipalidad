@@ -40,18 +40,23 @@ header.sticky {
     padding: 30px;
     margin: 50px 50px;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     
 }
 .primer h2 ,h3{
+    
     color: #2386b1;
 }
 .primer h3{
+ 
+    font-weight: 400;
     color: #2386b1;
+    
 }
 
 .primer p{
     margin: 10px;
+    font-size: small;
 }
 
 .search {
@@ -102,15 +107,15 @@ header.sticky {
 }
 
 .nav-bar {
-    background-color: rgba(226, 232, 237, 0.6); /* semi-transparente */
+    background-color:rgb(120 167 207 / 11%); /* semi-transparente */
     width: 100%;
     height: calc(2.5rem + 2rem);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 0px 1px 1px #2386b1;
+    box-shadow: 0px 0px 0.5px 0.5px #2386b1;
 }
 
 .logo {
@@ -135,6 +140,7 @@ header.sticky {
 }
 
 .cont-menu {
+    backdrop-filter: blur(10px);
     z-index: 10000;
     position: fixed;
     width: 100%;
@@ -146,8 +152,8 @@ header.sticky {
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s ease-in;
-    background-color:#31a2ff;
+    transition: 0.3s ease-out;
+    background-color: #1f5a8a95;
     transform: translateX(80px);
 }
 
@@ -212,16 +218,18 @@ header.sticky {
 
 /*INPUT*/
 
-.primer
 
 .datos label{
-    font-size: 16px;
+    font-size: 13px;
+    font-weight:bold;
 }
 
 .datos {
-    display:flex;
-    padding:20px ;
-    align-items: center
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 .datos-clave {
@@ -234,6 +242,8 @@ header.sticky {
 }
 
 .datos-clave input {
+
+    border-radius: 5px;
     
     margin-right: 10px;
     padding: 5px;
@@ -243,14 +253,19 @@ header.sticky {
     
 }
 
+
 .datos input , textarea{
-    
-    margin-right: 10px;
+    border-radius: 5px;
+    margin: 5px;
     padding: 5px;
     box-sizing: border-box;
     background: rgb(221, 221, 221);
     border: #2386b1 solid 1px;
     
+}
+
+.datos.direccion{
+    margin: 10px;
 }
 .input-small {
     width: 40px; /* Adjust width to fit two digits */
@@ -261,11 +276,11 @@ header.sticky {
 
 select {
     background-color: #31a2ff;
-    padding: 10px 14px;
+    padding: 4px 7px;
     margin-bottom: 15px;
     border: 0;
-    border-radius: 20px;
-    font-size: 50px;
+    border-radius: 8px;
+    font-size: 10px;
     color: #ffffff;
 }
 
@@ -315,6 +330,14 @@ input[type=number] {
     background-color: #dc3545;
 }
 
+.progress-bar {
+    text-align: center;
+    color: white;
+    line-height: 30px; /* Ajusta según el alto de la barra */
+    font-weight: bold;
+}
+
+
 
 .datos button:hover{
     background: var(--body-bg-color);
@@ -325,3 +348,11 @@ input[type=number] {
 -moz-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
 }
 
+
+@media screen and (max-width: 749px){
+
+    .primer{
+        margin: 41px 9px;
+        padding: 10px;
+    }
+}

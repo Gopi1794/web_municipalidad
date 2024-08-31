@@ -14,6 +14,6 @@ if($conexion){
     echo "Conectado exitosamente a la base de datos";
 }else{
     echo "No se a podido conectar a la base de datos";
-} */
-include("registro_usuarios_be.php");
+}*/
+
 ?>

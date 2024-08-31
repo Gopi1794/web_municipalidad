@@ -1,85 +1,102 @@
+document.addEventListener('DOMContentLoaded', function() {  
+    // Oculta los elementos al cargar la página  
+    const isChecked = document.getElementById('otroPaisCheckbox').checked;  
+    document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);  
+    document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);  
+    document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);  
+    document.getElementById('pais').classList.toggle('hidden', isChecked);  
+    document.getElementById('otropais').classList.add('hidden');  
 
-function showHideInputs() {  
-    const selectElement = document.getElementById("mun_id");  
-    const selectedValue = selectElement.value;  
-    const loc_id = document.getElementById("localidadDiv");  
-    const Map = document.getElementById('map');
+    // Verifica si la provincia es Buenos Aires al cargar la página
+    handleProvinceChange();
+});  
 
-    // Ocultar el input  
-    loc_id.classList.add("hidden");
-    Map.classList.add('hidden');  
+document.getElementById('otroPaisCheckbox').addEventListener('change', function() {  
+    const isChecked = this.checked;  
+    document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);  
+    document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);  
+    document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);  
+    document.getElementById('pais').classList.toggle('hidden', isChecked);  
 
-    // Mostrar el input si la opción seleccionada es "58"  
-    if (selectedValue === "58") {  
-        loc_id.classList.remove("hidden");
-        Map.classList.remove("hidden");
-    }  
-}  
+    const otroPais = document.getElementById("otropais");  
+    otroPais.classList.add("hidden");  
+    otroPais.classList.toggle('hidden', !isChecked);  
+});
 
-        document.addEventListener('DOMContentLoaded', function() {  
-            // Oculta los elementos al cargar la página  
-            const isChecked = document.getElementById('otroPaisCheckbox').checked;  
-            document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);  
-            document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);  
-            document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);  
-            document.getElementById('pais').classList.toggle('hidden', isChecked);  
-            document.getElementById('otropais').classList.add('hidden');  
-        });  
+// Función para manejar el cambio de provincia
+document.getElementById('prov_id').addEventListener('change', handleProvinceChange);
 
-        document.getElementById('otroPaisCheckbox').addEventListener('change', function() {  
-            const isChecked = this.checked;  
-            document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);  
-            document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);  
-            document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);  
-            document.getElementById('pais').classList.toggle('hidden', isChecked);  
+function handleProvinceChange() {
+    const selectedProvince = document.getElementById('prov_id').value;
+    const isBuenosAires = selectedProvince === "1"; // 1 es el valor para Buenos Aires
+    document.getElementById('municipalidadDiv').classList.toggle('hidden', !isBuenosAires);
+    document.getElementById('localidadDiv').classList.add('hidden'); // Oculta inicialmente la localidad
+
+    if (isBuenosAires) {
+        handleMunicipalityChange(); // Verifica la municipalidad al seleccionar Buenos Aires
+    } else {
+        // Si no es Buenos Aires, resetea los select de municipalidad y localidad
+        document.getElementById('mun_id').selectedIndex = 0;
+        document.getElementById('loc_id').selectedIndex = 0;
+    }
+}
+
+// Función para manejar el cambio de municipalidad
+document.getElementById('mun_id').addEventListener('change', handleMunicipalityChange);
+
+function handleMunicipalityChange() {
+    const selectedMunicipality = document.getElementById('mun_id').value;
+    const isSanVicente = selectedMunicipality === "58"; // 58 es el valor para San Vicente
+    document.getElementById('localidadDiv').classList.toggle('hidden', !isSanVicente);
+
+    if (!isSanVicente) {
+        document.getElementById('loc_id').selectedIndex = 0; // Resetea el selector de localidad si no es San Vicente
+    }
+}
+
+document.getElementById('searchButton').addEventListener('click', function() {
+    geocodeAddress();
+});
+
+let map;
+let geocoder;
+let marker;
+
+function initMap() {
+    geocoder = new google.maps.Geocoder();
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.6037, lng: -58.3816 }, // Coordenadas de Buenos Aires
+        zoom: 12, // Ajusta el nivel de zoom
+        mapTypeId: 'satellite' // Establece la vista de satélite
+    });
+    marker = new google.maps.Marker({
+        map: map
+    });
+}
 
 
-            const otroPais = document.getElementById("otropais");  
-            otroPais.classList.add("hidden");  
-            otroPais.classList.toggle('hidden', !isChecked);  
-        });  
+function geocodeAddress() {
+    const calle = document.getElementById('calle').value.trim();
+    const entreCalle = document.getElementById('entreCalle').value.trim();
+    const altura = document.getElementById('altura').value.trim();
+    const localidadSelect = document.getElementById('loc_id');
+    const localidad = localidadSelect.options[localidadSelect.selectedIndex].text;
 
-        let map;
-        let geocoder;
-        let marker;
-
-        function initMap() {
-            geocoder = new google.maps.Geocoder();
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8
-            });
-            marker = new google.maps.Marker({
-                map: map
-            });
-        }
-
-        function geocodeAddress() {
-            const calle = document.getElementById('calle').value.trim();
-            const entreCalle = document.getElementById('entreCalle').value.trim();
-            const altura = document.getElementById('altura').value.trim();
-            const localidadSelect = document.getElementById('loc_id');
-            const localidad = localidadSelect.options[localidadSelect.selectedIndex].text;
-
-            if (calle && entreCalle && altura && localidad) {
-                const address = `${calle} ${altura}, ${localidad}`;
-                geocoder.geocode({ address: address }, function(results, status) {
-                    if (status === 'OK') {
-                        map.setCenter(results[0].geometry.location);
-                        marker.setPosition(results[0].geometry.location);
-                        map.setZoom(15);
-                    } else {
-                        alert('No se pudo encontrar la dirección: ' + status);
-                    }
-                });
+    if (calle && entreCalle && altura && localidad) {
+        const address = `${calle} ${altura}, ${localidad}`;
+        geocoder.geocode({ address: address }, function(results, status) {
+            if (status === 'OK') {
+                map.setCenter(results[0].geometry.location);
+                marker.setPosition(results[0].geometry.location);
+                map.setZoom(15);
             } else {
-                alert('Por favor, complete todos los campos.');
+                alert('No se pudo encontrar la dirección: ' + status);
             }
-        }
-
-        document.getElementById('searchButton').addEventListener('click', function() {
-            geocodeAddress();
         });
+    } else {
+        alert('Por favor, complete todos los campos.');
+    }
+}
 
-        // Inicializa el mapa al cargar la página
-        window.onload = initMap;
+// Inicializa el mapa al cargar la página
+window.onload = initMap;
