@@ -74,6 +74,10 @@ header.sticky {
     justify-content: space-between;
 }
 
+.tramite h2{
+    font-size: 30px;
+}
+
 .primer button{
     background-color:#31a2ff;
     color: white;
@@ -208,20 +212,13 @@ header.sticky {
     cursor: pointer;
 }
 
-
-
-
-/*RESPONSIVE*/
-
-
-
-
 /*INPUT*/
 
 
 .datos label{
     font-size: 13px;
     font-weight:bold;
+    margin-right: 10px;
 }
 
 .datos {
@@ -237,9 +234,7 @@ header.sticky {
     padding:20px ;
 
 }
-.datos label {
-    margin-right: 10px;
-}
+
 
 .datos-clave input {
 
@@ -349,6 +344,95 @@ input[type=number] {
 }
 
 
+/*INGRESAR*/
+
+.contenerdor_ingreso {
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.primer2 {
+    background-color: rgba(220, 219, 219, 0.404);
+    box-shadow: 0px 0px 1px 1px #2386b1;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    width: fit-content;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-password {
+    width: 140px; /* Adjust width as needed */
+}
+
+
+hr {
+    border: none; /* Elimina cualquier borde predeterminado */
+    height: 1px; /* Ajusta la altura del hr */
+    background-color: #2386b1; /* Cambia el color del hr */
+    margin: 2px 0; /* Añade margen superior e inferior */
+    width: 100%; /* Ajusta la anchura si es necesario */
+}
+
+
+.datos2 {
+    display: flex;
+    padding: 9px;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.datos2 label{
+    font-size: 13px;
+    font-weight:bold;
+    margin-right: 10px;
+}
+
+.datos2 input{
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: rgb(221, 221, 221);
+    border: #2386b1 solid 1px;
+    
+}
+
+
+.primer2 img{
+    margin-bottom: 40px;
+}
+
+.datos2 .button-ingreso{
+    cursor: pointer;
+    background-color: #888787;
+    color: #ffffff;
+}
+
+.datos2 .button-ingreso-color{
+    cursor: pointer;
+    background-color: #2386b1;
+    color: #f5f5f5;
+}
+
+
+.datos2 .button-ingreso-color:hover{
+    background: #f5f5f5;
+    color: #2386b1;
+    transition: 0.3s ease;
+}
+
+.datos2 .button-ingreso:hover{
+    background: #f5f5f5;
+    color: #888787;
+    transition: 0.3s ease;
+}
 @media screen and (max-width: 749px){
 
     .primer{

@@ -11,6 +11,9 @@
     <header class="cabeza">
         <div class="nav-bar">
             <a href="index.html" class="logo"><img src="../img/logoMiSanVicente.png" alt="Logo"></a>
+            <div class="">
+
+            </div>
             <div class="menu-container">
                 <div class="btn-menu">
                     <i class="uil uil-align-right-justify nav-menu-btn-miSanvi"></i>
@@ -35,11 +38,17 @@
         <div class="primer">
             <div class="tramite-login">
                 <div class="tramite">
+                <?php
+                    session_start();
+    
+                    if (isset($_SESSION['nombre_usuario']) && isset($_SESSION['apellido_usuario'])) {
+                    echo '<h2>Bienvenido, ' . htmlspecialchars($_SESSION['nombre_usuario']) . ' ' . htmlspecialchars($_SESSION['apellido_usuario']) . '!</h2>';
+                    } else {
+                    echo '<p>No se ha iniciado sesión.</p>';
+                    }
+                    ?>
                     <input class="search" id="buscar" name="query" placeholder="Buscar Tramite">
                     <input class="button-buscar" id="button-buscar" type="submit" value="Buscar">
-                </div>
-                <div class="ingresar">
-                    <button id="btn__iniciar-sesion" href="../php/login_2.php">Iniciar Sesión</button>
                 </div>
             </div>
         </div>
