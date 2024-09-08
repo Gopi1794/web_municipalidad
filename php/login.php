@@ -46,7 +46,7 @@ include 'registro_usuarios_be.php';
             <div class="cont-menu">
                 <nav>
                     <ul>
-                        <li><a href="#"><i class="uil uil-signin"></i>INGRESAR</a>
+                        <li><a href="../php/login_2.php"><i class="uil uil-signin"></i>INGRESAR</a>
                         <li><a href="../php/login.html"><i class="uil uil-plus"></i>CREAR CUENTA</a>
                         <li><a href="#"><i class="uil uil-files-landscapes-alt"></i>TRAMITES</a>
                         <li><a href="#"><i class="uil uil-message"></i>ENVIAR CONSULTA</a>
@@ -104,7 +104,7 @@ include 'registro_usuarios_be.php';
                            <div class="datos">       
                             <label for="genero">GENERO:</label> 
                             <select id="genero" name="genero" title="Seleccione un opcion con la que se indentifique" required>
-                                <option value="MASCULINO">MASCULINO</option>
+                                <option value="MASCULINO" selected>MASCULINO</option>
                                 <option value="FEMENINO">FEMENINO</option>
                                 <option value="NO BINARIO">NO BINARIO</option>
                                 <option value="INDEFINIDO">INDEFINIDO</option>

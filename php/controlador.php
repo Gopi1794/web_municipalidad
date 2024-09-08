@@ -19,9 +19,14 @@ if (!empty($_POST["btnIngresar"])) {
 
         // Verificación de si existe el usuario
         if ($datos = $result->fetch_object()) {
-            // Guardar el nombre y apellido del usuario en la sesión
+            // Guardar los datos del usuario en la sesión
             $_SESSION['nombre_usuario'] = $datos->nombre;
             $_SESSION['apellido_usuario'] = $datos->apellido;
+            $_SESSION['dni_usuario'] = $datos->dni;
+            $_SESSION['cuil1_usuario'] = $datos->cuil1;
+            $_SESSION['cuil2_usuario'] = $datos->cuil2;
+            $_SESSION['cuil3_usuario'] = $datos->cuil3;
+            $_SESSION['fechaDeNacimiento_usuario'] = $datos->fechaDeNacimiento; // Asegúrate de que el campo sea el correcto
 
             // Redirigir a la página de inicio
             header("Location: ../misanvicente/index.php");

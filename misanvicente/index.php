@@ -1,3 +1,19 @@
+<?php
+session_start(); // Iniciar la sesión
+
+// Verificar si las claves 'nombre' y 'apellido' están definidas en la sesión
+$nombre = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : ''; // Si no existe, valor vacío
+$apellido = isset($_SESSION['apellido_usuario']) ? $_SESSION['apellido_usuario'] : ''; // Si no existe, valor vacío
+
+// Obtener la primera letra de nombre y apellido (solo si no están vacíos)
+$inicialNombre = !empty($nombre) ? substr($nombre, 0, 1) : ''; // Si $nombre está vacío, devolver ''
+$inicialApellido = !empty($apellido) ? substr($apellido, 0, 1) : ''; // Si $apellido está vacío, devolver ''
+
+// Combinar las iniciales
+$iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayúsculas
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,10 +27,8 @@
     <header class="cabeza">
         <div class="nav-bar">
             <a href="index.html" class="logo"><img src="../img/logoMiSanVicente.png" alt="Logo"></a>
-            <div class="">
-
-            </div>
             <div class="menu-container">
+            <div class="user"><a href="datos_user.php"><p><?php echo $iniciales; ?></p></a></div>
                 <div class="btn-menu">
                     <i class="uil uil-align-right-justify nav-menu-btn-miSanvi"></i>
                 </div>
@@ -39,7 +53,6 @@
             <div class="tramite-login">
                 <div class="tramite">
                 <?php
-                    session_start();
     
                     if (isset($_SESSION['nombre_usuario']) && isset($_SESSION['apellido_usuario'])) {
                     echo '<h2>Bienvenido, ' . htmlspecialchars($_SESSION['nombre_usuario']) . ' ' . htmlspecialchars($_SESSION['apellido_usuario']) . '!</h2>';
