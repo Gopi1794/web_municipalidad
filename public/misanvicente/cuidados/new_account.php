@@ -121,6 +121,11 @@ include 'registro_usuarios_be.php';
                             <label for="repitEmail">REPETIR E-MAIL:</label> 
                             <input type="email" id="repitEmail" name="repEmail" title="Vuelva a ingresar su mail" required>
                            </div>
+
+                           <div class="datos">       
+                            <label for="celular">CELULAR:</label> 
+                            <input type="number" name="celular" title="Vuelva a ingresar su celular" required>
+                           </div>
                     </div>
 
                     <div class="primer">

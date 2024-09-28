@@ -1,3 +1,16 @@
+//INPUT//
+
+const input1 = document.getElementById('dni1');
+const input2 = document.getElementById('dni2');
+
+input1.addEventListener('input', function() {
+    // Actualizar el valor del segundo input
+    input2.value = input1.value;
+});
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {  
     // Oculta los elementos al cargar la página  
     const isChecked = document.getElementById('otroPaisCheckbox').checked;  
@@ -100,3 +113,15 @@ function geocodeAddress() {
 
 // Inicializa el mapa al cargar la página
 window.onload = initMap;
+
+function mostrarContrasena(){
+    var tipo = document.getElementById("password");
+    if(tipo.type == "password"){
+        tipo.type = "text";
+    }else{
+        tipo.type = "password";
+    }
+}
+
+
+

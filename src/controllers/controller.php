@@ -26,7 +26,17 @@ if (!empty($_POST["btnIngresar"])) {
             $_SESSION['cuil1_usuario'] = $datos->cuil1;
             $_SESSION['cuil2_usuario'] = $datos->cuil2;
             $_SESSION['cuil3_usuario'] = $datos->cuil3;
-            $_SESSION['fechaDeNacimiento_usuario'] = $datos->fechaDeNacimiento; // Asegúrate de que el campo sea el correcto
+            $_SESSION['email_usuario'] = $datos->email;
+            $_SESSION['pais_usuario'] = $datos->pais;
+            $_SESSION['provincia_usuario'] = $datos->provincia;
+            $_SESSION['municipalidad_usuario'] = $datos->municipalidad;
+            $_SESSION['localidad_usuario'] = $datos->localidad;
+            $_SESSION['calle_usuario'] = $datos->calle;
+            $_SESSION['entre_calle_usuario'] = $datos->entreCalle;
+            $_SESSION['altura_usuario'] = $datos->altura;
+
+
+
 
             // Redirigir a la página de inicio
             header("Location: ../misanvicente/index.php");

@@ -9,6 +9,14 @@ $cuil1 = isset($_SESSION['cuil1_usuario']) ? (int)$_SESSION['cuil1_usuario'] : 0
 $cuil2 = isset($_SESSION['cuil2_usuario']) ? (int)$_SESSION['cuil2_usuario'] : 0;
 $cuil3 = isset($_SESSION['cuil3_usuario']) ? (int)$_SESSION['cuil3_usuario'] : 0;
 $fechaDeNacimientoSesion = isset($_SESSION['fechaDeNacimiento_usuario']) ? $_SESSION['fechaDeNacimiento_usuario'] : '';
+$email = isset($_SESSION['email_usuario']) ? $_SESSION['email_usuario'] : '';
+$pais = isset($_SESSION['pais_usuario']) ? $_SESSION['pais_usuario'] : '';
+$provincia = isset($_SESSION['provincia_usuario']) ? $_SESSION['provincia_usuario'] : '';
+$municipalidad = isset($_SESSION['municipalidad_usuario']) ? $_SESSION['municipalidad_usuario'] : '';
+$localidad = isset($_SESSION['localidad_usuario']) ? $_SESSION['localidad_usuario'] : '';
+$calle = isset($_SESSION['calle_usuario']) ? $_SESSION['calle_usuario'] : '';
+$entreCalle = isset($_SESSION['entre_calle_usuario']) ? $_SESSION['entre_calle_usuario'] : '';
+$altura = isset($_SESSION['altura_usuario']) ? $_SESSION['altura_usuario'] : '';
 
 // Inicializar la variable para la fecha formateada
 $fechaDeNacimiento = '';
@@ -24,7 +32,7 @@ if (!empty($fechaDeNacimientoSesion) && strtotime($fechaDeNacimientoSesion) !== 
 // Inicializar la variable para la fecha formateada
 
 // Mostrar valores para depuración
-var_dump($nombre, $apellido, $dni ,$cuil1 , $cuil2 , $cuil3, $fechaDeNacimiento);
+// var_dump($nombre, $apellido, $dni ,$cuil1 , $cuil2 , $cuil3, $fechaDeNacimiento,$email, $pais , $provincia);
 
 // Obtener la primera letra de nombre y apellido
 $inicialNombre = !empty($nombre) ? substr($nombre, 0, 1) : '';
@@ -41,6 +49,9 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
     <title>Mi San Vicente</title>
     <link rel="stylesheet" href="../css/style-register.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header class="cabeza">
@@ -69,26 +80,64 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
         </div>
     </div>
 
-    <div class="primer">
+    <div class="primer3">
         <h2>Datos de la cuenta</h2>
         <hr>
-        <div class="primer">
+        <div class="primer4">
             <h2>Datos Personales</h2>
             <hr>
-            <table>DNI:</table> <h3><?php echo $dni; ?></h3>
+            <table>DNI:</table> <h4><?php echo $dni; ?></h4>
             <hr>
-            <table>CUIL:</table> <h3><?php echo $cuilTotal; ?></h3>
+            <table>CUIL:</table> <h4><?php echo $cuilTotal; ?></h4>
             <hr>
-            <table>NOMBRE:</table> <h3><?php echo strtoupper($nombre); ?></h3>
+            <table>NOMBRE:</table> <h4><?php echo strtoupper($nombre); ?></h4>
             <hr>
-            <table>APELLIDO:</table> <h3><?php echo strtoupper($apellido); ?></h3>
+            <table>APELLIDO:</table> <h4><?php echo strtoupper($apellido); ?></h4>
             <hr>
-            <table>FECHA NAC:</table> <h3><?php echo $fechaDeNacimiento; ?></h3>
+            <table>FECHA NAC:</table> <h4><?php echo $fechaDeNacimiento; ?></h4>
             <hr>
-            <table>GENERO:</table> <h3><?php echo $dni; ?></h3>
+            <table>GENERO:</table> <h4></h4>
+            <br>
+            <br>
+            <h2>Datos de contacto</h2>
+            <table>CELULAR:</table> <h4><?php echo $email; ?></h4>
+            <hr>
+            <table>EMAIL:</table> <h4><?php echo $email; ?></h4>
+        
+        </div>
+        
+        <div class="primer4">
+            <h2>Residencia</h2>
+            <hr>
+            <table>PAIS:</table> <h4><?php echo $pais; ?></h4>
+            <hr>
+            <table>PROVINCIA:</table> <h4><?php echo $provincia; ?></h4>
+            <hr>
+            <table>MUNICIPIO:</table> <h4><?php echo $municipalidad ?></h4>
+            <hr>
+            <table>LOCALIDAD:</table> <h4><?php echo $localidad; ?></h4>
+            <hr>
+            <table>CALLE:</table> <h4><?php echo $calle; ?></h4>
+            <hr>
+            <table>ENTRE CALLE:</table><h4><?php echo$entreCalle ?></h4>
+            <hr>
+            <table>ALTURA:</table><h4><?php echo $altura ?></h4>
+        </div>
+        <div class="primer4">
+            <h2>Archivos del Perfil</h2>
+            <hr>
+            <table><h4>FRENTE DEL DNI</h4><br>
+            Envíenos una fotografía en formato horizontal del frente de su DNI:</table> <div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupFile01">Subir</label>
+  <input type="file" class="form-control" id="inputGroupFile01">
+</div>
+<table><h4>DORSO DEL DNI</h4><br>
+            Envíenos una fotografía en formato horizontal del dorso de su DNI:</table> <div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupFile01">Subir</label>
+  <input type="file" class="form-control" id="inputGroupFile01">
+</div>
         </div>
     </div>
-
     <script>
         window.addEventListener("scroll", function() {
             const header = document.querySelector("header");

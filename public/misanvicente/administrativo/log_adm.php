@@ -12,36 +12,24 @@
 <form method="post" action="">
     <div class="contenerdor_ingreso">
     <div class="primer2">
-        <img alt="logoMiSanVicente" class="logoMiSanVicente" src="../img/logoMiSanVicente.png">
+        <img alt="logoMiSanVicente" class="logoMiSanVicente" src="../img/logoMiSanVicente_adm.png">
         <?php
         include("conexion.php");
-        include("controlador.php");
+        include("controller_adm.php");
         ?>
         <div class="datos2">
-            <label for="cuil">CUIL:</label>
-            <input type="number" class="input-small" name="cuil1">
-            <input type="number" class="input-normal" name="cuil2">
-            <input type="number" class="input-small" name="cuil3">
+            <label for="cuil">DNI:</label>
+            <input type="number" class="input-password" name="dni_adm">
         </div>
 
         <div class="datos2">
             <label for="contrasena">CONTRASEÑA</label>
-            <input type="password" class="input-password" name="contrasena">
+            <input type="password" class="input-password" name="contrasena_adm">
         </div>
+        <br>
         <div class="datos2">
             <input class="button-ingreso-color" type="submit" value="Ingresar" name="btnIngresar">
-        </div>
-        <hr>
-        <div class="datos2">
-            <input class="button-ingreso" type="button" value="No puedo acceder" name="submit">
-            <input class="button-ingreso-color" type="button" value="Crear Cuenta">
-        </div>
-
-        <hr>
-            <div class="datos2">
-                <input class="button-ingreso" type="button" value="Envia tu consulta" name="submit">
-            <input class="button-ingreso" type="button" value="Guia de tramites">
-            </div>
+            
     </div>
 
 </div>

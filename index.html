@@ -1,120 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Municipalidad de San Vicente</title>
-    <link rel="stylesheet" href="css/slider.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="icon" type="image/x-icon" href="sv.ico" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Municipalidad de San Vicente</title>
+  <link rel="stylesheet" href="public/css/slider.css" />
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="icon" type="image/x-icon" href="sv.ico" />
 </head>
+
 <body>
-    <header>
-    </header>
-    <section class="home">
-
-      <div class="media-icons">
-        <a href=""><i class="uil uil-facebook-f"></i></a>
-        <a href=""><i class="uil uil-instagram"></i></a>
-        <a href=""><i class="uil uil-twitter"></i></a>
-        <a href=""><i class="uil uil-youtube"></i></a>
+  <header>
+    <div class="nav-bar">
+      <a href="index.html" class="logo"><img src="public/img/logos_sanvicente/logo_menu.png"></a>
+      <div class="navegation">
+          <div class="nav-items">
+              <i class="uil uil-times nav-close-btn"></i>
+              <nav class="navigation">
+                <ul>
+                <li><a href="index.html"><i class="uil uil-home"></i>Inicio</a></li>
+                <li><a href="#"><i class="uil uil-archway"></i>Municipio</a>
+                  <ul>
+                    <li><a href="public/municipio/intendente.html">Intendente Municipal</a></li>
+                    <li><a href="#">Otras autoridades</a></li>
+                    <li><a href="#">Historia</a></li>
+                    <li><a href="#">Mapa</a></li>
+                    <li><a href="#">Boletin Oficial</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="uil uil-comment-edit"></i>Area de gestion</a>
+                  <ul>
+                    <li><a href="#">Cultura y Deporte</a></li>
+                    <li><a href="#">Desarrollo Humano</a></li>
+                    <li><a href="#"></i>Educacion</a></li>
+                    <li><a href="#"></i>Protecccion Cuidadana</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#"></i>Hacienda</a></li>
+                    <li><a href="#"></i>Obras publicas</a></li>
+                    <li><a href="#"></i>Salud</a></li>
+                    <li><a href="#"></i>Medio Ambiente</a></li>
+                    <li><a href="#">Empleo - Industrias y Comercio local</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="uil uil-sign-alt"></i>Guia de tramites</a>
+                  <ul>
+                    <li><a href="misanvicente/index.html">Registro Municipal Unico y Permanente de Demanda Habitacional</a></li>
+                    <li><a href="#">Direccion de Comercio</a></li>
+                    <li><a href="#">Direccion de renta</a></li>
+                    <li><a href="#">Reclamos de Servicios Publicos</a></li>
+                    <li><a href="#">Licencias de Conducir</a></li>
+                    <li><a href="#">Pago de Tasas</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="uil uil-map-marker-shield"></i>El Partido</a>
+                  <ul>                      
+                    <li><a href="#">Partido de San Vicente</a></li>
+                    <li><a href="#">San Vicente</a></li>
+                    <li><a href="#">Domselaar</a></li>
+                    <li><a href="#">Alejandro Korn</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="uil uil-image-search"></i>Turismo</a></li>
+              </ul>
+              </nav>
+          </div>
       </div>
-      <div class="swiper bg-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide dark-layer">
-            <img src="img/Photo_1.jpg" alt=""/>
-            <div class="text-content">
-              <h2 class="title">Repavimentación y mantenimiento</h2>
-              <p>Avanzan los trabajos de repavimentación y mantenimiento que se están realizando en la intervención integral de la Ruta Provincial N°6, que contempla la refuncionalización de los tramos deteriorados, iluminación, señalización y puesta en valor de los puentes, para mejorar la transitabilidad en esta ruta tan importante para el desarrollo local y regional.</p>
-            <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
-            </div>
+      <i class="uil uil-apps nav-menu-btn"></i>
+  </div>
+  </header>
+
+  <section class="home">
+
+    <!-- COMIENZO CARRUSEL PRINCIPAL -->
+
+    <div class="media-icons">
+      <a href=""><i class="uil uil-facebook-f"></i></a>
+      <a href=""><i class="uil uil-instagram"></i></a>
+      <a href=""><i class="uil uil-twitter"></i></a>
+      <a href=""><i class="uil uil-youtube"></i></a>
+    </div>
+
+
+    <div class="swiper bg-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide dark-layer">
+          <img src="public/img/carrusel_index/repavimentacion_y_mantenimiento.jpg"
+            alt="Repavimentación y mantenimiento" />
+          <div class="text-content">
+            <h2 class="title">Repavimentación y mantenimiento</h2>
+            <p>Avanzan los trabajos de repavimentación y mantenimiento que se están realizando en la intervención
+              integral de la Ruta Provincial N°6, que contempla la refuncionalización de los tramos deteriorados,
+              iluminación, señalización y puesta en valor de los puentes, para mejorar la transitabilidad en esta ruta
+              tan importante para el desarrollo local y regional.</p>
+            <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i
+                class="uil uil-angle-right-b"></i></button>
           </div>
-
-          <div class="swiper-slide dark-layer">
-            <img src="img/Photo_2.jpg" alt=""/>
-            <div class="text-content">
-              <h2 class="title">Conectar Igualdad Bonaerense.</h2>
-              <p>Gracias a esta política pública que impulsa Axel Kicillof, como continuidad del programa que comenzó Cristina Fernandez de Kirchner en 2010, acortamos la brecha digital entre las y los estudiantes para facilitar la continuidad de sus estudios superiores, fomentando la conectividad, vinculación, aprendizaje y ocio.</p>
-            <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
-            </div>
-          </div>
-
-          <div class="swiper-slide dark-layer">
-            <img src="img/Photo_3.jpg" alt=""/>
-            <div class="text-content">
-              <h2 class="title">60 emprendedores laborales y cooperativas de trabajo</h2>
-              <p>Avanzan los trabajos de repavimentación y mantenimiento que se están realizando en la intervención integral de la Ruta Provincial N°6, que contempla la refuncionalización de los tramos deteriorados, iluminación, señalización y puesta en valor de los puentes, para mejorar la transitabilidad en esta ruta tan importante para el desarrollo local y regional.</p>
-            <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
-            </div>
-          </div>
-
-          <div class="swiper-slide dark-layer">
-            <img src="img/Photo_4.jpg" alt=""/>
-            <div class="text-content">
-              <h2 class="title">Agencia Municipal de Inclusión y Discapacidad.</h2>
-              <p> IOMA, IPS y ANSES<br>Recorrió, junto a Paula Pereyra, Fernanda Barcena, Andres Lorusso, Barbara Perez, Esther Lopez y Maria Mazzola, las postas donde los vecinos y vecinas han accedido a salud pública de calidad, vacunación de calendario, odontología, atención orientada a la salud mental y a los servicios que se ofrecen desde la Agencia Municipal de Inclusión y Discapacidad, IOMA, IPS y ANSES.</p>
-            <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
-            </div>
-          </div>
-
-          <div class="swiper-slide dark-layer">
-            <img src="img/Photo_5.jpg" alt=""/>
-            <div class="text-content">
-              <h2 class="title">Casa Municipal de Tierras.</h2>
-              <p> La Casa Municipal de Tierras es una nueva área dentro de la Municipalidad de San Vicente, la cual se dedica a abordar la política de suelo y desarrollo urbano, generando lotes con servicios y viviendas, ampliando así las oportunidades de acceso al suelo urbano, para que cada sanvicentino pueda cumplir el sueño de la casa propia.</p>
-            <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
-            </div>
-          </div>
-
-
         </div>
+
+        <div class="swiper-slide dark-layer">
+          <img src="public/img/carrusel_index/conectar_igualdad_bonaerense.jpg" alt="Conectar Igualdad Bonaerense" />
+          <div class="text-content">
+            <h2 class="title">Conectar Igualdad Bonaerense.</h2>
+            <p>Gracias a esta política pública que impulsa Axel Kicillof, como continuidad del programa que comenzó
+              Cristina Fernandez de Kirchner en 2010, acortamos la brecha digital entre las y los estudiantes para
+              facilitar la continuidad de sus estudios superiores, fomentando la conectividad, vinculación, aprendizaje
+              y ocio.</p>
+            <button class="read-btn"><a href="#" style="text-decoration: none; color: #fff;">Ver mas!</a><i
+                class="uil uil-angle-right-b"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper-slide dark-layer">
+          <img src="public/img/carrusel_index/60_emprendedores_laborales_y_cooperativas_de_trabajo.jpg"
+            alt="60 emprendedores laborales y cooperativas de trabajo" />
+          <div class="text-content">
+            <h2 class="title">60 emprendedores laborales y cooperativas de trabajo</h2>
+            <p>Avanzan los trabajos de repavimentación y mantenimiento que se están realizando en la intervención
+              integral de la Ruta Provincial N°6, que contempla la refuncionalización de los tramos deteriorados,
+              iluminación, señalización y puesta en valor de los puentes, para mejorar la transitabilidad en esta ruta
+              tan importante para el desarrollo local y regional.</p>
+            <button class="read-btn"><a href="#" style="text-decoration: none; color: #fff;">Ver mas!</a><i
+                class="uil uil-angle-right-b"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper-slide dark-layer">
+          <img src="public/img/carrusel_index/agencia_municipal_de_inclusión_y_discapacidad.jpg"
+            alt="Agencia Municipal de Inclusión y Discapacidad" />
+          <div class="text-content">
+            <h2 class="title">Agencia Municipal de Inclusión y Discapacidad.</h2>
+            <p> IOMA, IPS y ANSES<br>Recorrió, junto a Paula Pereyra, Fernanda Barcena, Andres Lorusso, Barbara Perez,
+              Esther Lopez y Maria Mazzola, las postas donde los vecinos y vecinas han accedido a salud pública de
+              calidad, vacunación de calendario, odontología, atención orientada a la salud mental y a los servicios que
+              se ofrecen desde la Agencia Municipal de Inclusión y Discapacidad, IOMA, IPS y ANSES.</p>
+            <button class="read-btn"><a href="#" style="text-decoration: none; color: #fff;">Ver mas!</a><i
+                class="uil uil-angle-right-b"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper-slide dark-layer">
+          <img src="public/img/carrusel_index/casa_municipal_de_tierras.jpg" alt="Casa Municipal de Tierras" />
+          <div class="text-content">
+            <h2 class="title">Casa Municipal de Tierras.</h2>
+            <p> La Casa Municipal de Tierras es una nueva área dentro de la Municipalidad de San Vicente, la cual se
+              dedica a abordar la política de suelo y desarrollo urbano, generando lotes con servicios y viviendas,
+              ampliando así las oportunidades de acceso al suelo urbano, para que cada sanvicentino pueda cumplir el
+              sueño de la casa propia.</p>
+            <button class="read-btn"><a href="public/tierras/tierras.html"
+                style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
+          </div>
+        </div>
+
+
+
+        //CODIGO PARA AGREGAR slider (paso 1 de 2)
+
+        <!-- <div class="swiper bg-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide dark-layer">
+                <img src="public/img/carrusel_index/repavimentacion_y_mantenimiento.jpg" alt="repavimentacion y mantenimiento"/>
+                <div class="text-content">
+                  <h2 class="title">Repavimentación y mantenimiento</h2>
+                  <p>Avanzan los trabajos de repavimentación y mantenimiento que se están realizando en la intervención integral de la Ruta Provincial N°6, que contempla la refuncionalización de los tramos deteriorados, iluminación, señalización y puesta en valor de los puentes, para mejorar la transitabilidad en esta ruta tan importante para el desarrollo local y regional.</p>
+                <button class="read-btn"><a href="tierras.html" style="text-decoration: none; color: #fff;">Ver mas!</a><i class="uil uil-angle-right-b"></i></button>
+                </div>
+              </div>  -->
+
       </div>
+    </div>
 
 
-      <div class="bg-slider-thumbs">
-        <div class="swiper-wrapper thumbs-container">
-          <img src="img/Photo_1.jpg" class="swiper-slide" alt="">
-          <img src="img/Photo_2.jpg" class="swiper-slide" alt="">
-          <img src="img/Photo_3.jpg" class="swiper-slide" alt="">
-          <img src="img/Photo_4.jpg" class="swiper-slide" alt="">
-          <img src="img/Photo_5.jpg" class="swiper-slide" alt="">
-          </div>
-        </div>
-      
-    </section>
-    <section class="general-slider">
+    <div class="bg-slider-thumbs">
+      <div class="swiper-wrapper thumbs-container">
+
+        <img src="public/img/carrusel_index/repavimentacion_y_mantenimiento.jpg" class="swiper-slide"
+          alt="Repavimentación y mantenimiento">
+
+        <img src="public/img/carrusel_index/conectar_igualdad_bonaerense.jpg" class="swiper-slide"
+          alt="Conectar Igualdad Bonaerense">
+
+        <img src="public/img/carrusel_index/60_emprendedores_laborales_y_cooperativas_de_trabajo.jpg"
+          class="swiper-slide" alt="60 emprendedores laborales y cooperativas de trabajo">
+
+        <img src="public/img/carrusel_index/agencia_municipal_de_inclusión_y_discapacidad.jpg" class="swiper-slide" alt="Agencia Municipal de Inclusión y Discapacidad">
+
+        <img src="public/img/carrusel_index/casa_municipal_de_tierras.jpg" class="swiper-slide" alt="Casa Municipal de Tierras">
+
+        <!-- /CODIGO PARA AGREGAR slider (paso 2 de 2) -->
+        <!-- <img src="" class="swiper-slide" alt=""> -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FIN DE CARRUSEL PRINCIPAL -->
+
+  <!-- COMIENZO CRRUSEL CARD PDF -->
+
+  <section class="general-slider">
+
     <div class="container swiper">
       <div class="slide-container">
         <div class="card-wrapper swiper-wrapper">
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/escolar.jpg" alt=""/>
+              <img src="public/img/carrusel-pdf/ayuda_escolas_2024.jpg" alt="Ayuda Escolar 2023" />
             </div>
             <div class="profile-details">
-              
               <div class="name-job">
                 <h1 class="name">DJJ</h1>
                 <h4 style="font-size: 15px;" class="job">Ayuda Escolar 2023</h4>
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-            <img src="img/carrusel-pdf/jumbofinanzas.ok_.jpg" alt="" />
+              <img src="public/img/carrusel-pdf/economia_y_finanzas.jpg" alt="Economica y finanziera" />
             </div>
             <div class="profile-details">
-              <!--<img src="images/profile/profile3.jpg" alt="" />-->
+              <!-- <img src="images/profile/profile3.jpg" alt="" /> -->
               <div class="name-job">
                 <h1 class="name">Situacion</h1>
                 <h4 style="font-size: 15px;" class="job">Economica y finanziera</h4>
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/png-clipart-computer-icons-auction-bidding-gavel-auction-angle-service.png" alt="" />
+              <img src="public/img/carrusel-pdf/varios.png"
+                alt="LP. 2" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile3.jpg" alt="" />-->
@@ -124,9 +246,11 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/png-clipart-computer-icons-auction-bidding-gavel-auction-angle-service.png" alt="" />
+              <img src="public/img/carrusel-pdf/varios.png"
+                alt="" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile4.jpg" alt="" />-->
@@ -136,9 +260,11 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/png-clipart-computer-icons-auction-bidding-gavel-auction-angle-service.png" alt="" />
+              <img src="public/img/carrusel-pdf/varios.png"
+                alt="" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -148,9 +274,11 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/png-clipart-computer-icons-auction-bidding-gavel-auction-angle-service.png" alt="" />
+              <img src="public/img/carrusel-pdf/varios.png"
+                alt="" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -160,9 +288,11 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/png-clipart-computer-icons-auction-bidding-gavel-auction-angle-service.png" alt="" />
+              <img src="public/img/carrusel-pdf/varios.png"
+                alt="" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -172,9 +302,10 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/impresora.png" alt="" />
+              <img src="public/img/carrusel-pdf/pago_de_tasas.png" alt="Pago de tasas" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -184,9 +315,10 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/licencia.png" alt="" />
+              <img src="public/img/carrusel-pdf/licencia_de_conducir.png" alt="Licencia de conducir" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -196,9 +328,11 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/png-clipart-computer-icons-auction-bidding-gavel-auction-angle-service.png" alt="" />
+              <img src="public/img/carrusel-pdf/varios.png"
+                alt="" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -208,9 +342,10 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/telefono.jpg" alt="" />
+              <img src="public/img/carrusel-pdf/direcciones.jpg" alt="Direcciones" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -220,9 +355,10 @@
               </div>
             </div>
           </div>
+
           <div class="card swiper-slide">
             <div class="image-box">
-              <img src="img/carrusel-pdf/calendario.jpg" alt="" />
+              <img src="public/img/carrusel-pdf/actividades.jpg" alt="Actividades" />
             </div>
             <div class="profile-details">
               <!--<img src="images/profile/profile5.jpg" alt="" />-->
@@ -232,124 +368,246 @@
               </div>
             </div>
           </div>
+
+          <!-- CODIGO PARA AGREGAR OTRA CARD -->
+
+          <!-- <div class="card swiper-slide"></div>
+            <div class="image-box">
+              <img src="" alt="" />
+            </div>
+            <div class="profile-details">
+              <img src="images/profile/profile5.jpg" alt="" />
+              <div class="name-job">
+                <h1 class="name"></h1>
+                <h4 style="font-size: 15px;" class="job"> Actividades </h4>
+              </div>
+            </div>
+          </div> -->
+
+
         </div>
       </div>
+
+      <!-- BOTONES CARRUSEL CARD PDF -->
       <div class="swiper-button-next swiper-navBtn"></div>
       <div class="swiper-button-prev swiper-navBtn"></div>
       <div class="swiper-pagination"></div>
+
     </div>
+
   </section>
 
+  <!-- FIN CARRUSEL CARD PDF -->
 
+
+  <!-- COMIENZO SESSION DE NOTICIAS -->
 
   <div class="new">
     <div class="card-grid">
-  <div class="cookieCard photo-new1">
-    <p class="cookieDescription">05/06/2023</p>
-
-    <p class="cookieHeading">2° ENCUENTRO DE<br>ADULTOS MAYORES</p>
-    
-    <button class="acceptButton">Leer Mas!</button>
-  </div>
-  <div class="cookieCard photo-new2">
-    <p class="cookieDescription">05/06/2023</p>
-
-    <p class="cookieHeading">AVANCE DEL <br>PROGRAMA CASA ACTIVA.</p>
-    
-    <button class="acceptButton">Leer Mas!</button>
-  </div>
-  <div class="cookieCard photo-new3">
-    <p class="cookieDescription">02/06/2023</p>
-
-    <p class="cookieHeading">CICLO “CIUDADANÍA <br>Y DERECHOS”.</p>
-    
-    <button class="acceptButton">Leer Mas!</button>
-  </div>
-  <div class="cookieCard photo-new4">
-    <p class="cookieDescription">06/06/2023</p>
-
-    <p class="cookieHeading">NUEVA AULA  <br>DE INFORMÁTICA.</p>
-    
-    <button class="acceptButton">Leer Mas!</button>
-  </div>
-</div>
-</div>
-<div class="container-moreNew">
-  <button class="moreNew">Ver mas noticias</button>
-</div>
 
 
-
-<section class="general-slider2">
-  <div class="container swiper">
-    <div class="slide-container">
-      <div class="card-video card-wrapper swiper-wrapper">
-        <div class="card swiper-slide">
-          <div class="image-box">
-            <iframe style="object-fit: cover;"width="100%" height="100%"  src="https://www.youtube.com/embed/KoA0lnG_6PY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="profile-details">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="image-box">
-            <iframe style="object-fit: cover;"width="100%" height="100%"   src="https://www.youtube.com/embed/YHDnLOrL2sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="profile-details">
-            <!--<img src="images/profile/profile3.jpg" alt="" />-->
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="image-box">
-            <iframe style="object-fit: cover;"width="100%" height="100%" src="https://www.youtube.com/embed/wHJQNFcATv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="profile-details">
-            <!--<img src="images/profile/profile3.jpg" alt="" />-->
-            
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="image-box">
-            <iframe style="object-fit: cover;"width="100%" height="100%"  src="https://www.youtube.com/embed/3yLvAD0UPgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="profile-details">
-            <!--<img src="images/profile/profile4.jpg" alt="" />-->
-            
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="image-box">
-            <iframe style="object-fit: cover;"width="100%" height="100%" src="https://www.youtube.com/embed/UgO78E1p7nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="profile-details">
-            <!--<img src="images/profile/profile5.jpg" alt="" />-->
-            
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="image-box">
-            <iframe style="object-fit: cover;"width="100%" height="100%" src="https://www.youtube.com/embed/m14NMavH36c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="profile-details">
-            <!--<img src="images/profile/profile5.jpg" alt="" />-->
-            
-          </div>
-        </div>
+      <div class="cookieCard photo-new1">
+        <p class="cookieDescription">05/06/2023</p>
+        <p class="cookieHeading">2° ENCUENTRO DE<br>ADULTOS MAYORES</p>
+        <button class="acceptButton">Leer Mas!</button>
       </div>
+
+      <div class="cookieCard photo-new2">
+        <p class="cookieDescription">05/06/2023</p>
+        <p class="cookieHeading">AVANCE DEL <br>PROGRAMA CASA ACTIVA.</p>
+        <button class="acceptButton">Leer Mas!</button>
+      </div>
+
+      <div class="cookieCard photo-new3">
+        <p class="cookieDescription">02/06/2023</p>
+        <p class="cookieHeading">CICLO “CIUDADANÍA <br>Y DERECHOS”.</p>
+        <button class="acceptButton">Leer Mas!</button>
+      </div>
+
+      <div class="cookieCard photo-new4">
+        <p class="cookieDescription">06/06/2023</p>
+        <p class="cookieHeading">NUEVA AULA <br>DE INFORMÁTICA.</p>
+        <button class="acceptButton">Leer Mas!</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container-moreNew">
+    <button class="moreNew">Ver mas noticias</button>
+  </div>
+
+  <!-- FIN SESSION DE NOTICIAS -->
+
+  <!-- COMIENZO CARRUSEL YOUTUBE -->
+
+  <section class="general-slider2">
+
+    <div class="container swiper">
+      <div class="slide-container">
+        <div class="card-video card-wrapper swiper-wrapper">
+
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <iframe style="object-fit: cover;" width="100%" height="100%"
+                src="https://www.youtube.com/embed/KoA0lnG_6PY" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="profile-details">
+            </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <iframe style="object-fit: cover;" width="100%" height="100%"
+                src="https://www.youtube.com/embed/YHDnLOrL2sw" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="profile-details">
+              <!--<img src="images/profile/profile3.jpg" alt="" />-->
+            </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <iframe style="object-fit: cover;" width="100%" height="100%"
+                src="https://www.youtube.com/embed/wHJQNFcATv0" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="profile-details">
+              <!--<img src="images/profile/profile3.jpg" alt="" />-->
+            </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <iframe style="object-fit: cover;" width="100%" height="100%"
+                src="https://www.youtube.com/embed/3yLvAD0UPgo" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="profile-details">
+              <!--<img src="images/profile/profile4.jpg" alt="" />-->
+            </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <iframe style="object-fit: cover;" width="100%" height="100%"
+                src="https://www.youtube.com/embed/UgO78E1p7nk" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="profile-details">
+              <!--<img src="images/profile/profile5.jpg" alt="" />-->
+            </div>
+          </div>
+          
+          <div class="card swiper-slide">
+            <div class="image-box">
+              <iframe style="object-fit: cover;" width="100%" height="100%"
+                src="https://www.youtube.com/embed/m14NMavH36c" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="profile-details">
+              <!--<img src="images/profile/profile5.jpg" alt="" />-->
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- BOTONES CARRUSEL YOUTUBE -->
     <div class="swiper-button-next swiper-navBtn"></div>
     <div class="swiper-button-prev swiper-navBtn"></div>
     <div class="swiper-pagination"></div>
-  </div>
-</section>
 
-<footer class="pie-pagina">
-</footer>
+  </section>
 
-  <script src="js/extension.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/main.js"></script>
-    
+<!-- FIN DE CARRUSEL YOUTUBE -->
+
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+      <figure>
+        <a href="#">
+      <img src="public/img/logos_sanvicente/logo_footer.png">
+      </a>
+      </figure>
+      <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13069.175973718178!2d-58.4232352!3d-35.0243744!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bd2c537e9e0257%3A0xb9144459b04a9eb7!2sMunicipalidad%20de%20San%20Vicente!5e0!3m2!1ses-419!2sar!4v1686262886732!5m2!1ses-419!2sar" width="400px" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+      <h4>
+        Av. Sarmiento 39<br>
+      San Vicente, Buenos Aires<br>
+      C.P.: 1865 / 02225 48-1101<br>
+      </h4>
+      </div>
+      
+      
+      
+      <div class="box">
+      <div class="municipio">
+      <h1>Municipio</h1>
+      <h3>Autoridades</h3>
+      <a href="">- Intendente Municipal</a>
+      <a href="">- Otras oportunidades</a>
+      <a href="">Historia</a>
+      <a href="">Mapa</a>
+      <h1>Área de gestion</h1>
+      <a href="">Cultura</a>
+      <a href="">Desarroloo Humano</a>
+      <a href="">Educacion</a>
+      <a href="">Protecccion Cuidadana</a>
+      <a href="">Servicios</a>
+      <a href="">Hacienda</a>
+      <a href="">Obras Publicas</a>
+      </div>
+      </div>
+      
+      
+      
+      
+      <div class="box">
+      <div class="municipio">
+      <h1>Municipio</h1>
+      <h3>Autoridades</h3>
+      <a href="">- Intendente Municipal</a>
+      <a href="">- Otras oportunidades</a>
+      <a href="">Historia</a>
+      <a href="">Mapa</a>
+      <h1>Área de gestion</h1>
+      <a href="">Cultura</a>
+      <a href="">Desarroloo Humano</a>
+      <a href="">Educacion</a>
+      <a href="">Protecccion Cuidadana</a>
+      <a href="">Servicios</a>
+      <a href="">Hacienda</a>
+      <a href="">Obras Publicas</a>
+      </div>
+      </div>
+      <div class="redes-sociales">
+      <a href="#" class="uil uil-facebook-f"></a>
+      <a href="#" class="uil uil-instagram"></a>
+      <a href="#" class="uil uil-twitter"></a>
+      <a href="#" class="uil uil-youtube"></a>
+      </div>
+      
+      </div>
+  </footer>
+
+  <script src="public/js/menu.active.js"></script>
+  <script src="vendor/slider/slider.js"></script>
+  <script src="public/js/slider_principal.js"></script>
+  <script src="public/js/slider_pdf.js"></script>
+ 
 </body>
+
 </html>

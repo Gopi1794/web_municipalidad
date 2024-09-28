@@ -7,16 +7,16 @@ const footer = document.querySelector("footer");
 
 cabeza.innerHTML = `
 <div class="nav-bar">
-            <a href="index.html" class="logo"><img src="img/arribalogo.png"></a>
+            <a href="../../index.html" class="logo"><img src="../img/logos_sanvicente/logo_menu.png"></a>
             <div class="navegation">
                 <div class="nav-items">
                     <i class="uil uil-times nav-close-btn"></i>
                     <nav class="navigation">
                       <ul>
-                      <li><a href="index.html"><i class="uil uil-home"></i>Inicio</a></li>
+                      <li><a href="../../index.html"><i class="uil uil-home"></i>Inicio</a></li>
                       <li><a href="#"><i class="uil uil-archway"></i>Municipio</a>
                         <ul>
-                          <li><a href="indentende.html">Intendente Municipal</a></li>
+                          <li><a href="public/municipio/intendente.html">Intendente Municipal</a></li>
                           <li><a href="#">Otras autoridades</a></li>
                           <li><a href="#">Historia</a></li>
                           <li><a href="#">Mapa</a></li>
@@ -72,7 +72,7 @@ footer.innerHTML = `
     <div class="box">
       <figure>
         <a href="#">
-      <img src="img/pielogo.png">
+      <img src="../img/logos_sanvicente/logo_footer.png">
     </a>
     </figure>
     <div class="mapa">
@@ -138,3 +138,24 @@ C.P.: 1865 / 02225 48-1101<br>
 </div>
 
 `;
+
+//Resposive navegation menu toggle
+
+const menuBtn = document.querySelector(".nav-menu-btn");
+const closeBtn = document.querySelector(".nav-close-btn");
+const navegation = document.querySelector(".navegation");
+
+menuBtn.addEventListener("click",  () =>{
+  navegation.classList.add("active");
+});
+closeBtn.addEventListener("click",  () =>{
+  navegation.classList.remove("active");
+});
+
+
+//Navegation bar effects on scroll//
+
+window.addEventListener("scroll" , function(){
+  const header = document.querySelector("header");
+  header.classList.toggle("sticky" , window.scrollY > 0);
+});
