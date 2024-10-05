@@ -39,7 +39,7 @@ if (!empty($_POST["btnIngresar"])) {
 
 
             // Redirigir a la página de inicio
-            header("Location: ../misanvicente/index.php");
+            header("Location: index.php");
             exit;
         } else {
             echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';

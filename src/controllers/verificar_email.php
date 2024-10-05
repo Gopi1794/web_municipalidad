@@ -20,12 +20,12 @@ if (isset($_GET['token'])) {
 
         echo '<script>
                 alert("Tu correo ha sido verificado correctamente.");
-                window.location = "login.php";
+                window.location = "index.php";
               </script>';
     } else {
         echo '<script>
                 alert("El token es inválido o el correo ya ha sido verificado.");
-                window.location = "login.php";
+                window.location = "index.php";
               </script>';
     }
 

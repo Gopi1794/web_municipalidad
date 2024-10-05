@@ -47,7 +47,7 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi San Vicente</title>
-    <link rel="stylesheet" href="../css/style-register.css">
+    <link rel="stylesheet" href="../../css/style-register.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -56,7 +56,7 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
 <body>
     <header class="cabeza">
         <div class="nav-bar">
-            <a href="index.html" class="logo"><img src="../img/logoMiSanVicente.png" alt="Logo"></a>
+            <a href="index.php" class="logo"><img src="../../img/logos_sanvicente/logo_misanvicente.png" alt="Logo"></a>
             <div class="menu-container">
                 <div class="user"><a href="#"><p><?php echo $iniciales; ?></p></a></div>
                 <div class="btn-menu">
@@ -69,12 +69,12 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
         <div class="cont-menu">
             <nav>
                 <ul>
-                    <li><a href="../php/login_2.php"><i class="uil uil-signin"></i>INGRESAR</a></li>
-                    <li><a href="../php/login.php"><i class="uil uil-plus"></i>CREAR CUENTA</a></li>
+                    <li><a href="login_ciudadanos.php"><i class="uil uil-signin"></i>INGRESAR</a></li>
+                    <li><a href="new_account.php"><i class="uil uil-plus"></i>CREAR CUENTA</a></li>
                     <li><a href="#"><i class="uil uil-files-landscapes-alt"></i>TRAMITES</a></li>
                     <li><a href="#"><i class="uil uil-message"></i>ENVIAR CONSULTA</a></li>
                 </ul>
-                <a href="../index.html" class="logo-principal"><img src="../img/logomenu.png" alt="Logo"></a>
+                <a href="../index.html" class="logo-principal"><img src="../../img/logos_sanvicente//logo_menu_misanvicente.png" alt="Logo"></a>
             </nav>
             <i class="uil uil-multiply nav-close-btn"></i>
         </div>
@@ -160,6 +160,6 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/SweetAlert.js"></script>
+    <script src="../../../vendor/SweetAlert.js"></script>
 </body>
 </html>

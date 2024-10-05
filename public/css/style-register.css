@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(../img/img-fondo-intendente/fondo-geometria-abstracta-moderno-fondo-pantalla-claro-banner-web-presentacion_752732-47.jpg) ;
+    background-image: url(../img/backgroud.jpg) ;
     background-size: cover;
     position: sticky;
 
@@ -125,6 +125,15 @@ header.sticky {
     background: #2386b1;
     color: white;
     cursor: pointer;
+}
+
+.button-buscar:hover{
+    background: var(--body-bg-color);
+    color: #2386b1;
+    transition: 0.3s ease;
+    box-shadow: 1px 1px 1px 3px #2386b1;
+-webkit-box-shadow: 1px 1px 2px 3px #2386b1;
+-moz-box-shadow: 1px 1px 17px 3px #2386b1;
 }
 
 

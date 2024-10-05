@@ -20,13 +20,13 @@ $iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayú
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi San Vicente</title>
-    <link rel="stylesheet" href="../css/style-register.css">
+    <link rel="stylesheet"href="../../css/style-register.css"> 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
     <header class="cabeza">
         <div class="nav-bar">
-            <a href="index.html" class="logo"><img src="../img/logoMiSanVicente.png" alt="Logo"></a>
+            <a href="index.php" class="logo"><img src="../../img/logos_sanvicente/logo_misanvicente.png" alt="Logo"></a>
             <div class="menu-container">
             <div class="user"><a href="datos_user.php"><p><?php echo $iniciales; ?></p></a></div>
                 <div class="btn-menu">
@@ -39,12 +39,12 @@ $iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayú
             <div class="cont-menu">
                 <nav>
                     <ul>
-                        <li><a href="../php/login_2.php"><i class="uil uil-signin"></i>INGRESAR</a>
-                        <li><a href="../php/login.php"><i class="uil uil-plus"></i>CREAR CUENTA</a>
+                        <li><a href="login_ciudadanos.php"><i class="uil uil-signin"></i>INGRESAR</a>
+                        <li><a href="new_account.php"><i class="uil uil-plus"></i>CREAR CUENTA</a>
                         <li><a href="#"><i class="uil uil-files-landscapes-alt"></i>TRAMITES</a>
                         <li><a href="#"><i class="uil uil-message"></i>ENVIAR CONSULTA</a>
                     </ul>
-                    <a href="../index.html" class="logo-principal"><img src="../img/logomenu.png" alt="Logo"></a>
+                    <a href="../../../index.html" class="logo-principal"><img src="../../img/logos_sanvicente/logo_menu_misanvicente.png" alt="Logo"></a>
                 </nav>
                 <i class="uil uil-multiply nav-close-btn"></i>
             </div>
@@ -138,7 +138,7 @@ $iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayú
             </script>
             
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script src="../js/SweetAlert.js"></script>
+            <script src="../../../vendor/SweetAlert.js"></script>
             
         
 </body>

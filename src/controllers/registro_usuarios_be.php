@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         empty($nombre) || empty($fechaDeNacimiento) || empty($email) || empty($repEmail) || empty($pais)) {
         echo '<script>
                 alert("Por favor, complete todos los campos.");
-                window.location = "login.php";
+                window.location = "../../public/misanvicente/ciudadano/index.php";
               </script>';
         exit();
     }
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($email !== $repEmail) {
         echo '<script>
                 alert("Los correos electrónicos no coinciden. Verifique.");
-                window.location = "login.php";
+                window.location = "../../public/misanvicente/cuidados/index.phpp";
               </script>';
         exit();
     }
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (mysqli_num_rows($verificar_user) > 0) {
         echo '<script>
                 alert("Esta persona ya está registrada.");
-                window.location = "login.php";
+                window.location = "../../public/misanvicente/cuidados/index.php";
               </script>';
         exit();
     }
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (mysqli_num_rows($verificar_correo) > 0) {
         echo '<script>
                 alert("El Email ya fue utilizado. Por favor use otro.");
-                window.location = "login.php";
+                window.location = "../../public/misanvicente/cuidados/index.php";
               </script>';
         exit();
     }
@@ -86,18 +86,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mail($email, $subject, $message, $headers)) {
             echo '<script>
                     alert("Registro exitoso. Se ha enviado un correo de verificación a tu email.");
-                    window.location = "login.php";
+                    window.location = "../../public/misanvicente/cuidados/index.php";
                   </script>';
         } else {
             echo '<script>
                     alert("Hubo un error al enviar el correo de verificación.");
-                    window.location = "login.php";
+                    window.location = "../../public/misanvicente/cuidados/index.php";
                   </script>';
         }
     } else {
         echo '<script>
                 alert("Hubo un error al registrar. Inténtelo nuevamente.");
-                window.location = "login.php";
+                window.location = "../../public/misanvicente/cuidados/index.php";
               </script>';
     }
 
