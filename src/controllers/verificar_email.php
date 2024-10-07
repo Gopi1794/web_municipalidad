@@ -20,12 +20,12 @@ if (isset($_GET['token'])) {
 
         echo '<script>
                 alert("Tu correo ha sido verificado correctamente.");
-                window.location = "index.php";
+                window.location = "../../public/misanvicente/ciudadano/index.php";
               </script>';
     } else {
         echo '<script>
                 alert("El token es inválido o el correo ya ha sido verificado.");
-                window.location = "index.php";
+                window.location = "../../public/misanvicente/ciudadano/index.php";
               </script>';
     }
 
@@ -34,7 +34,7 @@ if (isset($_GET['token'])) {
 } else {
     echo '<script>
             alert("No se proporcionó un token de verificación.");
-            window.location = "login.php";
+            window.location = "../../public/misanvicente/ciudadano/index.php";
           </script>';
 }
 ?>

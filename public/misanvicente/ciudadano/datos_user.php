@@ -123,6 +123,7 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
             <hr>
             <table>ALTURA:</table><h4><?php echo $altura ?></h4>
         </div>
+
         <div class="primer4">
             <h2>Archivos del Perfil</h2>
             <hr>
@@ -137,6 +138,10 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
   <input type="file" class="form-control" id="inputGroupFile01">
 </div>
         </div>
+
+    <div class="primer4">
+         <h2>Mis familiares vinculados</h2>
+    </div>
     </div>
     <script>
         window.addEventListener("scroll", function() {

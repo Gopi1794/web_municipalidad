@@ -98,7 +98,9 @@ header.sticky {
 .tramite-login{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    padding: 10px;
 }
 
 .tramite h2{
@@ -538,5 +540,14 @@ hr {
     .primer{
         margin: 41px 9px;
         padding: 10px;
+    }
+
+    .primer3{
+        margin: 50px 10px;
+    }
+
+    .primer4{
+        padding: 16px;
+        margin: 15px 0px;
     }
 }

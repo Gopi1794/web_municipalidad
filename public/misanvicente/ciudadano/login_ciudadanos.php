@@ -30,7 +30,7 @@
         </div>
         <div class="datos2">
             <input class="button-ingreso-color" type="submit" value="Ingresar" name="btnIngresar">
-            <input class="button-ingreso-color" type="button" onclick="window.location.href='login_2_copy.php';"value="Administracion" name="btnAdm">
+            <input class="button-ingreso-color" type="button" onclick="window.location.href='../administrativo/log_adm.php';"value="Administracion" name="btnAdm">
         </div>
         <hr>
         <div class="datos2">
