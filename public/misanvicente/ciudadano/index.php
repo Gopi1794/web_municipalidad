@@ -2,8 +2,8 @@
 session_start(); // Iniciar la sesión
 
 // Verificar si las claves 'nombre' y 'apellido' están definidas en la sesión
-$nombre = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : ''; // Si no existe, valor vacío
-$apellido = isset($_SESSION['apellido_usuario']) ? $_SESSION['apellido_usuario'] : ''; // Si no existe, valor vacío
+$nombre = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'Incie'; // Si no existe, valor vacío
+$apellido = isset($_SESSION['apellido_usuario']) ? $_SESSION['apellido_usuario'] : 'Sesion , Por favor'; // Si no existe, valor vacío
 
 // Obtener la primera letra de nombre y apellido (solo si no están vacíos)
 $inicialNombre = !empty($nombre) ? substr($nombre, 0, 1) : ''; // Si $nombre está vacío, devolver ''
