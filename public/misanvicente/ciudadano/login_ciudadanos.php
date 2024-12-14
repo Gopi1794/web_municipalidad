@@ -34,7 +34,9 @@
         </div>
         <hr>
         <div class="datos2">
-            <input class="button-ingreso" type="button" value="No puedo acceder" name="submit">
+  <input class="button-ingreso" type="button" value="No puedo acceder" name="submit" onclick="toggleModals()">
+
+
             <input class="button-ingreso-color" type="button" value="Crear Cuenta">
         </div>
 
@@ -44,8 +46,17 @@
             <input class="button-ingreso" type="button" value="Guia de tramites">
             </div>
     </div>
-
+</div>
 </div>
 </form>
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <p>¿Qué acción deseas realizar?</p>
+      <button class="modal-button" onclick="redirectAndClose('recuperar_contrasena.php')">Recuperar Contraseña</button>
+      <button class="modal-button" onclick="redirectAndClose('revalidacion_email.php')">No me llego el E-mail de confirmacion</button>
+    </div>
+</div>
+
+<script src="../../js/ventana_emergente.js"></script>
 </body>
 </html>

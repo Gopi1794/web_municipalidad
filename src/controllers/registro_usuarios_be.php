@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fechaDeNacimiento = $_POST['fechaDeNacimiento'];
     $email = $_POST['email'];
     $repEmail = $_POST['repEmail'];
+    $celular = $_POST['celular'];
     $pais = $_POST['pais'];
     $otropais = $_POST['otropais'];
     $provincia = $_POST['provincia'];
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validar campos vacíos
     if (empty($dni) || empty($cuil1) || empty($cuil2) || empty($cuil3) || empty($contrasena) || empty($apellido) || 
-        empty($nombre) || empty($fechaDeNacimiento) || empty($email) || empty($repEmail) || empty($pais)) {
+        empty($nombre) || empty($fechaDeNacimiento) || empty($email) || empty($repEmail) || empty($celular) || empty($pais)) {
         echo '<script>
                 alert("Por favor, complete todos los campos.");
                 window.location = "../../public/misanvicente/ciudadano/index.php";

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi San Vicente</title>
-    <link rel="stylesheet" href="../css/style-register.css">
+    <link rel="stylesheet"href="../../css/style-register.css"> 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
     <header class="cabeza">
         <div class="nav-bar">
-            <a href="index.html" class="logo"><img src="../img/logos_sanvicente/logo_misanvicente.png" alt="Logo"></a>
+            <a href="index.php" class="logo"><img src="../../img/logos_sanvicente/logo_misanvicente.png" alt="Logo"></a>
             <div class="menu-container">
+            <div class="user"><a href="datos_user.php"><p><?php echo $iniciales; ?></p></a></div>
                 <div class="btn-menu">
                     <i class="uil uil-align-right-justify nav-menu-btn-miSanvi"></i>
                 </div>
@@ -22,12 +23,12 @@
             <div class="cont-menu">
                 <nav>
                     <ul>
-                        <li><a href="../misanvicente/ciudadano/login_ciudadanos.php"><i class="uil uil-signin"></i>INGRESAR</a>
-                        <li><a href="../misanvicente/ciudadano/new_account.php"><i class="uil uil-plus"></i>CREAR CUENTA</a>
+                        <li><a href="login_ciudadanos.php"><i class="uil uil-signin"></i>INGRESAR</a>
+                        <li><a href="new_account.php"><i class="uil uil-plus"></i>CREAR CUENTA</a>
                         <li><a href="#"><i class="uil uil-files-landscapes-alt"></i>TRAMITES</a>
                         <li><a href="#"><i class="uil uil-message"></i>ENVIAR CONSULTA</a>
                     </ul>
-                    <a href="../index.html" class="logo-principal"><img src="../img/logos_sanvicente/logo_menu_misanvicente.png" alt="Logo"></a>
+                    <a href="../../../index.html" class="logo-principal"><img src="../../img/logos_sanvicente/logo_menu_misanvicente.png" alt="Logo"></a>
                 </nav>
                 <i class="uil uil-multiply nav-close-btn"></i>
             </div>
@@ -35,11 +36,16 @@
         <div class="primer">
             <div class="tramite-login">
                 <div class="tramite">
+                <?php
+    
+                    if (isset($_SESSION['nombre_usuario']) && isset($_SESSION['apellido_usuario'])) {
+                    echo '<h2>Bienvenido, ' . htmlspecialchars($_SESSION['nombre_usuario']) . ' ' . htmlspecialchars($_SESSION['apellido_usuario']) . '!</h2>';
+                    } else {
+                    echo '<p>No se ha iniciado sesión.</p>';
+                    }
+                    ?>
                     <input class="search" id="buscar" name="query" placeholder="Buscar Tramite">
                     <input class="button-buscar" id="button-buscar" type="submit" value="Buscar">
-                </div>
-                <div class="inglresar">
-                    <button id="btn__iniciar-sesion"><a style="text-decoration: none; color: #Ffffff;" href="../misanvicente/ciudadano/login_ciudadanos.php">Iniciar Sesión</a></button>
                 </div>
             </div>
         </div>
@@ -91,8 +97,12 @@
                         <p>Recibo de haberes (otro familiar - opcional)</p>
             </div>
 
-
-
+            <script>
+                window.addEventListener("scroll", function() {
+                    const header = document.querySelector("header");
+                    header.classList.toggle("sticky", window.scrollY > 0);
+                });
+            </script>
 
 
             <script>
@@ -110,10 +120,10 @@
     });
 });
             </script>
+            
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script src="../js/SweetAlert.js"></script>
-
-
-
+            <script src="../../../vendor/SweetAlert.js"></script>
+            
+        
 </body>
 </html>

@@ -10,6 +10,7 @@ $cuil2 = isset($_SESSION['cuil2_usuario']) ? (int)$_SESSION['cuil2_usuario'] : 0
 $cuil3 = isset($_SESSION['cuil3_usuario']) ? (int)$_SESSION['cuil3_usuario'] : 0;
 $fechaDeNacimientoSesion = isset($_SESSION['fechaDeNacimiento_usuario']) ? $_SESSION['fechaDeNacimiento_usuario'] : '';
 $email = isset($_SESSION['email_usuario']) ? $_SESSION['email_usuario'] : '';
+$celular = isset($_SESSION['celular']) ? $_SESSION['celular'] : '';
 $pais = isset($_SESSION['pais_usuario']) ? $_SESSION['pais_usuario'] : '';
 $provincia = isset($_SESSION['provincia_usuario']) ? $_SESSION['provincia_usuario'] : '';
 $municipalidad = isset($_SESSION['municipalidad_usuario']) ? $_SESSION['municipalidad_usuario'] : '';
@@ -17,6 +18,7 @@ $localidad = isset($_SESSION['localidad_usuario']) ? $_SESSION['localidad_usuari
 $calle = isset($_SESSION['calle_usuario']) ? $_SESSION['calle_usuario'] : '';
 $entreCalle = isset($_SESSION['entre_calle_usuario']) ? $_SESSION['entre_calle_usuario'] : '';
 $altura = isset($_SESSION['altura_usuario']) ? $_SESSION['altura_usuario'] : '';
+$verificado = isset($_SESSION['verificacion']) ? (int)$_SESSION['verificacion'] : 0;
 
 // Inicializar la variable para la fecha formateada
 $fechaDeNacimiento = '';
@@ -39,6 +41,10 @@ $inicialNombre = !empty($nombre) ? substr($nombre, 0, 1) : '';
 $inicialApellido = !empty($apellido) ? substr($apellido, 0, 1) : '';
 $iniciales = strtoupper($inicialNombre . $inicialApellido); 
 $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
+
+$claseVerificacion = $verificado === 1 ? "texto-verde" : "texto-rojo";
+$mensajeVerificacion = $verificado === 1 ? "Correo Verificado" : "Correo No Verificado";
+
 ?>
 
 <!DOCTYPE html>
@@ -100,9 +106,13 @@ $cuilTotal = $cuil1 . '-' . $cuil2 . '-' . $cuil3;
             <br>
             <br>
             <h2>Datos de contacto</h2>
-            <table>CELULAR:</table> <h4><?php echo $email; ?></h4>
+            <table>CELULAR:</table> <h4><?php echo $celular; ?></h4>
             <hr>
-            <table>EMAIL:</table> <h4><?php echo $email; ?></h4>
+            <table>EMAIL:</table> 
+<h4 class="<?php echo $claseVerificacion; ?>">
+    <?php echo $email; ?> - <?php echo $mensajeVerificacion; ?>
+</h4>
+
         
         </div>
         

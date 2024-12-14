@@ -124,7 +124,7 @@ include '../../../src/controllers/registro_usuarios_be.php';
 
                 <div class="datos">
                     <label for="celular">CELULAR:</label>
-                    <input type="number" name="celular" title="Vuelva a ingresar su celular" required>
+                    <input type="number" id="celular" name="celular" title="Vuelva a ingresar su celular" required>
                 </div>
         </div>
 
@@ -432,6 +432,13 @@ include '../../../src/controllers/registro_usuarios_be.php';
                 });
             });
         </script>
+        
+        <script>
+                window.addEventListener("scroll", function() {
+                    const header = document.querySelector("header");
+                    header.classList.toggle("sticky", window.scrollY > 0);
+                });
+            </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="../../js/user_register_front.js"></script>
