@@ -26,6 +26,9 @@ if (!empty($_POST["btnIngresar"])) {
             $_SESSION['cuil1_usuario'] = $datos->cuil1;
             $_SESSION['cuil2_usuario'] = $datos->cuil2;
             $_SESSION['cuil3_usuario'] = $datos->cuil3;
+            $_SESSION['fechaDeNacimiento_usuario'] = $datos->fechaDeNacimiento;
+            $_SESSION['genero_usuario'] = $datos->genero;
+            $_SESSION['celular_usuario'] = $datos->celular;
             $_SESSION['email_usuario'] = $datos->email;
             $_SESSION['pais_usuario'] = $datos->pais;
             $_SESSION['provincia_usuario'] = $datos->provincia;
@@ -48,5 +51,18 @@ if (!empty($_POST["btnIngresar"])) {
         // Cierre de la declaración
         $stmt->close();
     }
+}
+if (isset($_POST['btnCerrar']) || isset($_GET['cerrarSesion'])) {
+    $_SESSION = array();
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+            $params["path"], $params["domain"],
+            $params["secure"], $params["httponly"]
+        );
+    }
+    session_destroy();
+    header("Location: ../../public/misanvicente/index.html");
+    exit;
 }
 ?>

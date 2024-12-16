@@ -28,7 +28,10 @@ $iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayú
         <div class="nav-bar">
             <a href="index.php" class="logo"><img src="../../img/logos_sanvicente/logo_misanvicente.png" alt="Logo"></a>
             <div class="menu-container">
-            <div class="user"><a href="datos_user.php"><p><?php echo $iniciales; ?></p></a></div>
+            <button class="button-cerrar-iniciar" id="button-cerrar" type="button" name="btnCerrar">CERRAR SESION</button>
+            <div class="user">
+                
+            <a href="datos_user.php"><p><?php echo $iniciales; ?></p></a></div>
                 <div class="btn-menu">
                     <i class="uil uil-align-right-justify nav-menu-btn-miSanvi"></i>
                 </div>
@@ -46,6 +49,7 @@ $iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayú
                     </ul>
                     <a href="../../../index.html" class="logo-principal"><img src="../../img/logos_sanvicente/logo_menu_misanvicente.png" alt="Logo"></a>
                 </nav>
+                
                 <i class="uil uil-multiply nav-close-btn"></i>
             </div>
         </div>
@@ -139,6 +143,7 @@ $iniciales = strtoupper($inicialNombre . $inicialApellido); // Combinar en mayú
             
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="../../../vendor/SweetAlert.js"></script>
+            <script src="../../js/accionIniciarCrear.js"></script>
             
         
 </body>

@@ -88,7 +88,7 @@ header.sticky{
     height: calc(2.5rem + 2rem);
     background: rgba(255, 255, 255, 0.457);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 162, 255, 0.848);
+    border-bottom: 1px solid #00a2ffd8;
     
 
 }
@@ -163,7 +163,6 @@ header .nav-bar{
 }
 
 .nav-bar .logo img{
-    width: 250px;
     height: 50px;
     margin-top: 10px;
 }

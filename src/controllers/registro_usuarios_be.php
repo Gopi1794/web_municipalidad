@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $repEmail = $_POST['repEmail'];
     $celular = $_POST['celular'];
+    $genero= $_POST['genero'];
     $pais = $_POST['pais'];
     $otropais = $_POST['otropais'];
     $provincia = $_POST['provincia'];
@@ -68,12 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $token = bin2hex(random_bytes(6)); // Token de 100 caracteres en hexadecimal
 
     // Utiliza una consulta preparada para evitar la inyección SQL
-    $query = "INSERT INTO datos (dni, cuil1, cuil2, cuil3, contrasena, apellido, nombre, fechaDeNacimiento, email, repEmail, 
+    $query = "INSERT INTO datos (dni, cuil1, cuil2, cuil3, contrasena, genero, apellido, nombre, fechaDeNacimiento, celular , email, repEmail, 
             pais, otropais, provincia, municipalidad, localidad, calle, entreCalle, altura, piso, depto, per_observacion, token, verificado) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
     $stmt = mysqli_prepare($conexion, $query);
     mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssss", 
-        $dni, $cuil1, $cuil2, $cuil3, $contrasena, $apellido, $nombre, $fechaDeNacimiento, $email, $repEmail, 
+        $dni, $cuil1, $cuil2, $cuil3, $contrasena, $genero, $apellido, $nombre, $fechaDeNacimiento,$celular ,$email, $repEmail, 
         $pais, $otropais, $provincia, $municipalidad, $localidad, $calle, $entreCalle, $altura, $piso, $depto, $per_observacion, $token);
     
     // Ejecutar la consulta
@@ -82,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $subject = "Verificación de correo electrónico";
         $message = "Hola, por favor verifica tu correo haciendo clic en el siguiente enlace:\n\n";
         $message .= "http://localhost/verificar_email.php?token=" . $token;
-        $headers = "From: no-reply@tu-dominio.com";
+        $headers = "From: Municipio de San Vicente / MI SANVICENTE";
 
         if (mail($email, $subject, $message, $headers)) {
             echo '<script>
