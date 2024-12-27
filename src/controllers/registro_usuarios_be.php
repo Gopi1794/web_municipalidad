@@ -88,18 +88,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mail($email, $subject, $message, $headers)) {
             echo '<script>
                     alert("Registro exitoso. Se ha enviado un correo de verificación a tu email.");
-                    window.location = "../../public/misanvicente/cuidados/index.php";
+                    window.location = "../../public/misanvicente/cuidadano/index.php";
                   </script>';
         } else {
             echo '<script>
                     alert("Hubo un error al enviar el correo de verificación.");
-                    window.location = "../../public/misanvicente/cuidados/index.php";
+                    window.location = "../../public/misanvicente/cuidadano/index.php";
                   </script>';
         }
     } else {
         echo '<script>
                 alert("Hubo un error al registrar. Inténtelo nuevamente.");
-                window.location = "../../public/misanvicente/cuidados/index.php";
+                window.location = "../../public/misanvicente/cuidadano/index.php";
               </script>';
     }
 

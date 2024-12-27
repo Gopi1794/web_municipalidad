@@ -9,7 +9,7 @@
     <title>Ingreso administrativo - Mi San Vicente</title>
 </head>
 <body>
-<form method="post" action="">
+<form method="post" action="../../../src/controllers/controller_log_adm.php">
     <div class="contenerdor_ingreso">
     <div class="primer2">
         <img alt="logoMiSanVicente" class="logoMiSanVicente" src="../../img/logos_sanvicente/logo_misanvicente_adm.png">
@@ -19,19 +19,17 @@
         ?>
         <div class="datos2">
             <label for="cuil">DNI:</label>
-            <input type="number" class="input-password" name="dni_adm">
+            <input type="number" class="input-password" id="dni_adm" name="dni_adm">
         </div>
 
         <div class="datos2">
             <label for="contrasena">CONTRASEÑA</label>
-            <input type="password" class="input-password" name="contrasena_adm">
+            <input type="password" autocomplete="new-password" id="contrasena_adm" class="input-password" name="contrasena_adm">
         </div>
         <br>
         <div class="datos2">
             <input class="button-ingreso-color" type="submit" value="Ingresar" name="btnIngresar">
-            
     </div>
-
 </div>
 </form>
 </body>

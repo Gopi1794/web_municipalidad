@@ -66,13 +66,13 @@ include '../../../src/controllers/registro_usuarios_be.php';
             <form action="../../../src/controllers/registro_usuarios_be.php" method="post">
                 <div class="datos">
                     <label for="dni1">DNI:</label>
-                    <input type="number" id="dni1" name="dni" min="0" max="99999999" title="DNI de la persona que se registra 'SIN PUNTOS'" required>
+                    <input type="number" id="dni1" name="dni" min="0" max="99999999" placeholder="INGRESE SU DNI, SIN PUNTOS" title="DNI de la persona que se registra 'SIN PUNTOS'" required>
                 </div>
                 <div class="datos">
                     <label for="cuil2">CUIL:</label>
-                    <input type="number" class="input-small" maxlength="2" id="input1" name="cuil1" title="Por ejemplo: 20 para mujeres y 27 para hombres" required>
-                    <input type="number" class="input-normal" id="dni2" name="cuil2" title="Se rellena con tu DNI" required>
-                    <input type="number" class="input-small" maxlength="2" id="input3" name="cuil3" title="Aca va el codigo verificador" required>
+                    <input type="number" class="input-small" maxlength="2" id="input1" name="cuil1" title="Ingrese su prefijo de cuil" required>
+                    <input type="number" class="input-normal" id="dni2" name="cuil2" title="Se rellena con tu DNI automaticamente completando la casilla anterior" required>
+                    <input type="number" class="input-small" maxlength="2" id="input3" name="cuil3" title="ingrese el codigo verificador de su cuil" required>
                 </div>
 
                 <div class="datos">
@@ -88,12 +88,12 @@ include '../../../src/controllers/registro_usuarios_be.php';
 
                 <div class="datos">
                     <label for="apellido">APELLIDO:</label>
-                    <input type="text" id="apellido" name="apellido" title="Apellido de la persona que se registra" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="APELLIDO" title="Ingrese el apellido de la persona que se registra" required>
                 </div>
 
                 <div class="datos">
                     <label for="nombre">NOMBRE:</label>
-                    <input type="text" id="nombre" name="nombre" title="Nombre de la persona que se registra" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="NOMBRE" title="Ingrese el nombre de la persona que se registra" required>
                 </div>
 
                 <div class="datos">
@@ -113,18 +113,18 @@ include '../../../src/controllers/registro_usuarios_be.php';
 
                 <div class="datos">
                     <label for="email">E-MAIL:</label>
-                    <input type="email" id="email" name="email" title="Ingrese su mail" required>
+                    <input type="email" id="email" name="email" placeholder="E-MAIL" title="Ingrese su mail" required>
                 </div>
 
 
                 <div class="datos">
                     <label for="repitEmail">REPETIR E-MAIL:</label>
-                    <input type="email" id="repitEmail" name="repEmail" title="Vuelva a ingresar su mail" required>
+                    <input type="email" id="repitEmail" name="repEmail" placeholder="REPETIR E-MAIL" title="Vuelva a ingresar su mail" required>
                 </div>
 
                 <div class="datos">
                     <label for="celular">CELULAR:</label>
-                    <input type="number" id="celular" name="celular" title="Vuelva a ingresar su celular" required>
+                    <input type="number" id="celular" placeholder="CELULAR" name="celular" title="Vuelva a ingresar su celular" required>
                 </div>
         </div>
 
@@ -325,13 +325,13 @@ include '../../../src/controllers/registro_usuarios_be.php';
             <div class="datos">
                 <div class="direccion">
                     <label for="calle">CALLE:</label>
-                    <input type="text" id="calle" name="calle" title="Ingrese la calle en la que vive" required>
+                    <input type="text" id="calle" name="calle" placeholder="CALLE" title="Ingrese la calle en la que vive" required>
                     <br>
                     <label for="entreCalle">ENTRE CALLE:</label>
-                    <input type="text" id="entreCalle" name="entreCalle" title="Ingrese una de las calles en la que vive" required>
+                    <input type="text" id="entreCalle" name="entreCalle" placeholder="ENTRE CALLE" title="Ingrese una de las calles en la que vive" required>
                     <br>
                     <label for="altura">ALTURA:</label>
-                    <input type="text" id="altura" name="altura" title="Ingrese la altura de la calle en la que vive" required>
+                    <input type="text" id="altura" name="altura" placeholder="ALTURA" title="Ingrese la altura de la calle en la que vive" required>
                     <br>
                     <button id="searchButton" type="button">Buscar</button>
                 </div>
@@ -341,11 +341,11 @@ include '../../../src/controllers/registro_usuarios_be.php';
             <div class="datos">
                 <div class="piso">
                     <label for="piso">PISO:</label>
-                    <input type="text" id="piso" name="piso" title="Ingrese el piso en el que vive en el caso que sea necesario">
+                    <input type="text" id="piso" name="piso" placeholder="PISO" title="Ingrese el piso en el que vive en el caso que sea necesario">
                     <br>
                     <br>
                     <label for="depto">DEPTO:</label>
-                    <input type="text" id="depto" name="depto" title="Ingrese el departamento en el que vive en el caso que sea necesario">
+                    <input type="text" id="depto" name="depto" placeholder="DEPARTAMENTO" title="Ingrese el departamento en el que vive en el caso que sea necesario">
                 </div>
 
 
@@ -355,7 +355,7 @@ include '../../../src/controllers/registro_usuarios_be.php';
                 <div class="observacion" id="observacion">
                     <label for="per_observacion">OBSERVACION PARA ENCONTRAR MEJOR SU UBICACION:</label>
                     <br>
-                    <textarea name="per_observacion" id="observacion" rows="2" cols="30" title="Haga una descripcion de su persona si es necesario"></textarea>
+                    <textarea name="per_observacion" id="observacion" rows="2" cols="30" placeholder="INGRESE UNA DESCRIPCION DE SU UBICACION" title="Haga una descripcion de su persona si es necesario"></textarea>
                 </div>
             </div>
 
