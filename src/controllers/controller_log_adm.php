@@ -29,7 +29,7 @@ if (!empty($_POST["btnIngresar"])) {
             $_SESSION['apellido_adm'] = $adm->apellido; 
 
             // Redirigir a la página de inicio
-            header("Location: ../../../web_municipalidad/public/misanvicente/administrativo/index_adm.php");
+            header("Location: ../../public/misanvicente/administrativo/index_adm.php");
             exit;
         } else {
             echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';

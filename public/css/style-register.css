@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -9,10 +8,11 @@
 }
 
 body {
-    background-image: url(../img/backgroud.jpg) ;
+    background-image: url(../img/backgroud.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    position: sticky;
-
+    background-attachment: fixed
 }
 
 
@@ -25,6 +25,7 @@ header {
     transition: 0.3s ease;
     background-color: #ffffffc6;
 }
+
 header.sticky {
     position: sticky;
     height: calc(2.5rem + 2rem);
@@ -34,7 +35,7 @@ header.sticky {
 }
 
 
-.primer3{
+.primer3 {
     display: flex;
     background-color: rgba(220, 219, 219, 0.404);
     box-shadow: 0px 0px 1px 1px #2386b1;
@@ -46,21 +47,23 @@ header.sticky {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-   
+
 }
-.primer3 h2 ,h3{
-    
+
+.primer3 h2,
+h3 {
+
     color: #2386b1;
 }
-.primer3 h3{
- 
+
+.primer3 h3 {
+
     font-weight: 700;
     font-style: italic;
     color: #2386b1;
-    
 }
 
-.primer4{
+.primer4 {
     background-color: rgba(220, 219, 219, 0.404);
     box-shadow: 0px 0px 1px 1px #2386b1;
     backdrop-filter: blur(5px);
@@ -73,20 +76,36 @@ header.sticky {
     align-content: center;
     width: 100%;
 }
-.primer4 h2 ,h3{
-    
+
+.primer4 h2,
+h3 {
+
     color: #2386b1;
 }
-.primer4 h3{
- 
+
+.primer4 h3 {
+
     font-weight: 900;
     color: #2386b1;
-    
+
 }
-.primer4 h4{
+
+.primer4 h4 {
+    font-size: 15px;
     font-weight: 400;
     font-style: normal;
-    width:40vh
+    width: 40vh;
+}
+
+.button_familiar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.button_familiar .editar_familiar {
+    color: #ffffff;
+    font-size: 20px;
 }
 
 
@@ -102,7 +121,7 @@ header.sticky {
     outline: none;
 }
 
-.tramite-login{
+.tramite-login {
     margin: 0 10PX 0 0;
     display: flex;
     flex-wrap: nowrap;
@@ -112,13 +131,13 @@ header.sticky {
     justify-content: center;
 }
 
-.tramite h2{
+.tramite h2 {
     font-size: 30px;
 }
 
-.primer button{
+.primer button {
     display: flex;
-    background-color:#005b88;
+    background-color: #005b88;
     color: white;
     border: none;
     padding: 0.5rem 2rem;
@@ -139,25 +158,50 @@ header.sticky {
     cursor: pointer;
 }
 
-.button-buscar:hover{
+.button-buscar:hover {
     background: #0b6ca4d8;
     transition: 0.3s ease;
 }
 
-.button-cerrar-iniciar{
-    padding: 10px 40px;
+.button-edit {
+    padding: 10px 10px;
+    margin: 0px 0px;
     border: none;
     font-size: 14px;
-    background: #005b88;
-    color: white;
+    background-color: #005b88a1;
+    border-bottom: #ffffff solid 1px;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
-.button-cerrar-iniciar:hover{
+.button-edit:hover {
     background: #0b6ca4d8;
     transition: 0.3s ease;
-   
+
 }
+
+.button-cerrar-iniciar {
+    padding: 40px 40px;
+    margin: 0px 0px;
+    border: none;
+    font-size: 14px;
+    background-color: #005b88a1;
+    border-bottom: #ffffff solid 1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.button-cerrar-iniciar:hover {
+    background: #0b6ca4d8;
+    transition: 0.3s ease;
+
+}
+
+#sidebarLabel {
+    color: white;
+}
+
+
 
 
 /*LOGO MI SANVICENTE*/
@@ -170,7 +214,8 @@ header.sticky {
 }
 
 .nav-bar {
-    background-color:rgb(120 167 207 / 11%); /* semi-transparente */
+    background-color: rgb(120 167 207 / 11%);
+    /* semi-transparente */
     width: 100%;
     height: calc(2.5rem + 2rem);
     backdrop-filter: blur(10px);
@@ -181,7 +226,7 @@ header.sticky {
     box-shadow: 0px 0px 0.5px 0.5px #2386b1;
 }
 
-.user a{
+.user a {
     text-decoration: none;
 }
 
@@ -201,27 +246,27 @@ header.sticky {
     transition: 0.2s ease-out;
 }
 
-.user a p:hover{
-    background-color: #ffffff; 
+.user a p:hover {
+    background-color: #ffffff;
     color: #005b88;
 }
 
 
 
 .logo {
-    position: absolute;
-    left: 20px; /* Ajusta según sea necesario */
     z-index: 100;
 }
 
 .menu-container {
-    margin-left: auto; /* Empujar el menú al final */
+    margin-left: auto;
+    /* Empujar el menú al final */
     display: flex;
     align-items: center;
 }
 
 .btn-menu {
-    font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
+    font-size: 24px;
+    /* Ajusta el tamaño del ícono según tus necesidades */
     cursor: pointer;
 }
 
@@ -248,10 +293,10 @@ header.sticky {
 }
 
 .cont-menu nav ul li {
-    list-style: none;   
+    list-style: none;
 }
 
-.cont-menu nav ul li a{
+.cont-menu nav ul li a {
     float: left;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -260,23 +305,23 @@ header.sticky {
     padding: 10px;
     font-size: 20px;
     transition: 0.2s ease;
-    
+
 }
 
 .cont-menu nav i {
     font-size: 30px;
-    margin-right: 8px; 
+    margin-right: 8px;
 }
 
-.cont-menu nav ul li a:hover{
-    background-color:#2386b1;
+.cont-menu nav ul li a:hover {
+    background-color: #ffffff;
     width: 100%;
-    color: #ffffff;
-    border-radius: 10px
+    color: #2e70b7;
+    border-radius: 10px;
 }
 
 
-.cont-menu nav img{
+.cont-menu nav img {
     width: 300px;
     padding-top: 100px;
 }
@@ -301,9 +346,9 @@ header.sticky {
 /*INPUT*/
 
 
-.datos label{
+.datos label {
     font-size: 13px;
-    font-weight:bold;
+    font-weight: bold;
     margin-right: 10px;
 }
 
@@ -312,12 +357,12 @@ header.sticky {
     padding: 20px;
     align-items: center;
     flex-wrap: wrap;
-    
+
 }
 
 .datos-clave {
 
-    padding:20px ;
+    padding: 20px;
 
 }
 
@@ -325,34 +370,39 @@ header.sticky {
 .datos-clave input {
 
     border-radius: 5px;
-    
+
     margin-right: 10px;
     padding: 5px;
     box-sizing: border-box;
     background: rgb(221, 221, 221);
     border: #2386b1 solid 1px;
-    
+
 }
 
 
-.datos input , textarea{
+.datos input,
+textarea {
     border-radius: 5px;
     margin: 5px;
     padding: 5px;
     box-sizing: border-box;
     background: rgb(221, 221, 221);
     border: #2386b1 solid 1px;
-    
+
 }
 
-.datos.direccion{
+.datos.direccion {
     margin: 10px;
 }
+
 .input-small {
-    width: 40px; /* Adjust width to fit two digits */
+    width: 40px;
+    /* Adjust width to fit two digits */
 }
+
 .input-normal {
-    width: 100px; /* Adjust width as needed */
+    width: 100px;
+    /* Adjust width as needed */
 }
 
 select {
@@ -367,12 +417,12 @@ select {
 
 
 
-/* Para navegadores WebKit (Chrome, Safari) */  
-input[type=number]::-webkit-inner-spin-button,  
-input[type=number]::-webkit-outer-spin-button {  
-    -webkit-appearance: none;  
-    margin: 0;  
-}  
+/* Para navegadores WebKit (Chrome, Safari) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 #map {
     height: 400px;
@@ -408,30 +458,34 @@ input[type=number]::-webkit-outer-spin-button {
 .progress-bar {
     text-align: center;
     color: white;
-    line-height: 30px; /* Ajusta según el alto de la barra */
+    line-height: 30px;
+    /* Ajusta según el alto de la barra */
     font-weight: bold;
 }
 
 
 
-.datos button:hover{
+.datos button:hover {
     background: var(--body-bg-color);
     color: #10aecd;
     transition: 0.3s ease;
-    box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
--webkit-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
--moz-box-shadow: 3px 3px 151px 45px rgba(16,174,205,1);
+    box-shadow: 3px 3px 151px 45px rgba(16, 174, 205, 1);
+    -webkit-box-shadow: 3px 3px 151px 45px rgba(16, 174, 205, 1);
+    -moz-box-shadow: 3px 3px 151px 45px rgba(16, 174, 205, 1);
 }
 
 
 /*INGRESAR*/
 
 .contenerdor_ingreso {
-    height: 100vh; /* Ocupa toda la altura del viewport */
+    height: 100vh;
+    /* Ocupa toda la altura del viewport */
     margin: 0;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 .primer2 {
@@ -439,6 +493,7 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0px 0px 1px 1px #2386b1;
     backdrop-filter: blur(5px);
     padding: 30px;
+    margin: 10px;
     width: fit-content;
     border-radius: 20px;
     display: flex;
@@ -447,16 +502,22 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .input-password {
-    width: 140px; /* Adjust width as needed */
+    width: 140px;
+    /* Adjust width as needed */
 }
 
 
 hr {
-    border: none; /* Elimina cualquier borde predeterminado */
-    height: 1px; /* Ajusta la altura del hr */
-    background-color: #2386b1; /* Cambia el color del hr */
-    margin: 2px 0; /* Añade margen superior e inferior */
-    width: 100%; /* Ajusta la anchura si es necesario */
+    border: none;
+    /* Elimina cualquier borde predeterminado */
+    height: 1px;
+    /* Ajusta la altura del hr */
+    background-color: #2386b1;
+    /* Cambia el color del hr */
+    margin: 2px 0;
+    /* Añade margen superior e inferior */
+    width: 100%;
+    /* Ajusta la anchura si es necesario */
 }
 
 
@@ -465,50 +526,50 @@ hr {
     padding: 9px;
     align-items: center;
     flex-wrap: wrap;
-    
+
 }
 
-.datos2 label{
+.datos2 label {
     font-size: 13px;
-    font-weight:bold;
+    font-weight: bold;
     margin-right: 10px;
 }
 
-.datos2 input{
+.datos2 input {
     border-radius: 5px;
     margin: 5px;
     padding: 5px;
     box-sizing: border-box;
     background: rgb(221, 221, 221);
     border: #2386b1 solid 1px;
-    
+
 }
 
 
-.primer2 img{
+.primer2 img {
     margin-bottom: 40px;
 }
 
-.datos2 .button-ingreso{
+.datos2 .button-ingreso {
     cursor: pointer;
     background-color: #888787;
     color: #ffffff;
 }
 
-.datos2 .button-ingreso-color{
+.datos2 .button-ingreso-color {
     cursor: pointer;
     background-color: #2386b1;
     color: #f5f5f5;
 }
 
 
-.datos2 .button-ingreso-color:hover{
+.datos2 .button-ingreso-color:hover {
     background: #f5f5f5;
     color: #2386b1;
     transition: 0.3s ease;
 }
 
-.datos2 .button-ingreso:hover{
+.datos2 .button-ingreso:hover {
     background: #f5f5f5;
     color: #888787;
     transition: 0.3s ease;
@@ -519,57 +580,98 @@ hr {
 
 /*USUARIO*/
 
-.primer table{
+
+
+.primer table {
     font-size: 20px;
     display: flex;
 }
 
-.primer{
-    background-color:rgba(220, 219, 219, 0.404);
-    box-shadow:0px 0px 1px 1px #2386b1;
+.primer {
+    background-color: rgba(220, 219, 219, 0.404);
+    box-shadow: 0px 0px 1px 1px #2386b1;
     backdrop-filter: blur(5px);
     padding: 30px;
     margin: 50px 50px;
     border-radius: 20px;
     margin-top: 50px;
-    
-}
-.primer h2 ,h3{
-    
-    color: #2386b1;
-}
-.primer h3{
-    font-weight: 400;
-    color: #2386b1;
-    
+
 }
 
-.primer p{
+.primer h2,
+h3 {
+
+    color: #2386b1;
+}
+
+.primer h3 {
+    font-weight: 400;
+    color: #2386b1;
+
+}
+
+.primer p {
     margin: 10px;
     font-size: small;
 }
 
 
+#sidebar {
+    background-color: #1f5a8a95;
+    box-shadow: 0px 0px 1px 1px #2386b1;
+    backdrop-filter: blur(5px);
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.offcanvas-backdrop {
+    background-color: transparent !important;
+}
 
 
 
 
-@media screen and (max-width: 749px){
 
-    .primer{
+@media screen and (max-width: 1300px) {
+
+    .primer6 {
+        display: none;
+    }
+
+    .btn {
+        display: flex;
+    }
+}
+
+
+
+@media screen and (max-width: 749px) {
+
+    .primer {
         margin: 41px 9px;
         padding: 10px;
     }
 
-    .primer3{
+    .primer3 {
         margin: 50px 10px;
     }
 
-    .primer4{
+    .primer4 {
         padding: 16px;
         margin: 15px 0px;
     }
+
+    #myChart {
+        width: 100%;
+    }
+
+
 }
+
 
 #modal {
     display: none;
@@ -600,8 +702,8 @@ hr {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    border:solid 1px #005b88;
-    
+    border: solid 1px #005b88;
+
 }
 
 .modal-button {
@@ -612,10 +714,10 @@ hr {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    border:solid 1px #005b88;
+    border: solid 1px #005b88;
 }
 
-.modal-button2{
+.modal-button2 {
     justify-content: center;
     margin: 20px;
     padding: 20px 20px;
@@ -623,7 +725,7 @@ hr {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    border:solid 1px #005b88;
+    border: solid 1px #005b88;
 }
 
 
@@ -632,13 +734,13 @@ hr {
 #modal .modal-button:hover {
     background-color: #f5f5f5;
     color: #005b88;
-    border:solid 1px #005b88;
+    border: solid 1px #005b88;
 }
 
 .modal-button:hover {
     background-color: #f5f5f5;
     color: #005b88;
-    border:solid 1px #005b88;
+    border: solid 1px #005b88;
 }
 
 
@@ -654,46 +756,55 @@ hr {
 }
 
 .modal-backdrop {
-    background-color: rgb(0, 0, 0); /* Color semitransparente */
-    backdrop-filter: blur(50px); /* Efecto de desenfoque */
+    background-color: rgb(0, 0, 0);
+    /* Color semitransparente */
+    backdrop-filter: blur(50px);
+    /* Efecto de desenfoque */
 }
+
 /* Animación para el ingreso (fade-in) */
 .modal.fade-in {
-    animation: fadeIn 0.3s ease-in forwards; /* Duración y suavidad */
-  }
-  
-  @keyframes fadeIn {
+    animation: fadeIn 0.3s ease-in forwards;
+    /* Duración y suavidad */
+}
+
+@keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: scale(0.9); /* Efecto de zoom */
+        opacity: 0;
+        transform: scale(0.9);
+        /* Efecto de zoom */
     }
+
     to {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
-  }
-  
-  /* Animación para la salida (fade-out) */
-  .modal.fade-out {
-    animation: fadeOut 0.3s ease-out forwards; /* Duración y suavidad */
-  }
-  
-  @keyframes fadeOut {
+}
+
+/* Animación para la salida (fade-out) */
+.modal.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+    /* Duración y suavidad */
+}
+
+@keyframes fadeOut {
     from {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
+
     to {
-      opacity: 0;
-      transform: scale(0.9); /* Efecto de zoom inverso */
+        opacity: 0;
+        transform: scale(0.9);
+        /* Efecto de zoom inverso */
     }
-  }
-  
+}
+
 
 
 
 /*ALERTA PERSONALIZADA*/
-.custom-swal-popup{
+.custom-swal-popup {
     background-color: rgba(255, 255, 255, 0.774);
     box-shadow: 0px 0px 1px 1px #2386b1;
     backdrop-filter: blur(5px);
@@ -703,9 +814,9 @@ hr {
 
 /*GRAFICAOS*/
 
-.grafico1{
+.grafico1 {
     max-width: 100%;
-      height: auto;
+    height: auto;
 }
 
 .primer5 {
@@ -713,10 +824,45 @@ hr {
     background-color: rgba(220, 219, 219, 0.404);
     box-shadow: 0px 0px 1px 1px #2386b1;
     backdrop-filter: blur(5px);
-    /* padding: 30px; */
-    margin: 38px 21px;
+    padding: 30px;
     border-radius: 20px;
     margin-top: 50px;
     flex-wrap: wrap;
     justify-content: flex-start;
+}
+
+#cantProvincia {
+    transition: flex-basis 0.5s ease, width 0.5s ease;
+    cursor: pointer;
+}
+
+
+/* Mover el sidebar */
+/* Sidebar cerrado */
+#sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* Sidebar abierto */
+#sidebar.show {
+    transform: translateX(0);
+}
+
+/* Contenido principal desplazado */
+#mainContent.with-sidebar {
+    margin-left: 250px;
+    /* Ajusta al ancho del sidebar */
+    transition: margin-left 0.3s ease;
+}
+
+/* Contenido principal en posición inicial */
+#mainContent {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+
+.table-responsive table {
+    border-radius: 25px;
 }

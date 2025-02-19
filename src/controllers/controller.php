@@ -8,10 +8,11 @@ if (!empty($_POST["btnIngresar"])) {
         echo '<div class="alert alert-danger">DEBES LLENAR TODOS LOS CAMPOS</div>';
     } else {
         // Captura de los datos del formulario
-        $cuil1 = $_POST["cuil1"];
-        $cuil2 = $_POST["cuil2"];
-        $cuil3 = $_POST["cuil3"];
-        $contrasena = $_POST["contrasena"];
+        $cuil1 = htmlspecialchars(trim($_POST["cuil1"]));
+        $cuil2 = htmlspecialchars(trim($_POST["cuil2"]));
+        $cuil3 = htmlspecialchars(trim($_POST["cuil3"]));
+        $contrasena = htmlspecialchars(trim($_POST["contrasena"]));
+
 
         // Preparación de la consulta
         $stmt = $conexion->prepare("SELECT * FROM datos WHERE cuil1 = ? AND cuil2 = ? AND cuil3 = ? AND contrasena = ?");
@@ -62,7 +63,6 @@ if (!empty($_POST["btnIngresar"])) {
 
         // Cierre de la declaración
         $stmt->close();
-        $stmt2->close();
     }
 }
 
@@ -100,13 +100,17 @@ if (isset($_POST['btnCerrar']) || isset($_GET['cerrarSesion'])) {
     $_SESSION = array();
     if (ini_get("session.use_cookies")) {
         $params = session_get_cookie_params();
-        setcookie(session_name(), '', time() - 42000,
-            $params["path"], $params["domain"],
-            $params["secure"], $params["httponly"]
+        setcookie(
+            session_name(),
+            '',
+            time() - 42000,
+            $params["path"],
+            $params["domain"],
+            $params["secure"],
+            $params["httponly"]
         );
     }
     session_destroy();
     header("Location: ../../public/misanvicente/index.html");
     exit;
 }
-?>

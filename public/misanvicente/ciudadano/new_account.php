@@ -13,6 +13,7 @@ include '../../../src/controllers/registro_usuarios_be.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style-register.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -370,51 +371,7 @@ include '../../../src/controllers/registro_usuarios_be.php';
         </div>
 
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const progressInput = document.getElementById('contrasena');
-                const progressBar = document.getElementById('progressBar');
-
-                const moderate = /(?=.*[A-Z])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[a-z]).{5,}|(?=.*[\d])(?=.*[A-Z])(?=.*[a-z]).{5,}/;
-                const strong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[\d]).{7,}|(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=.*[\d]).{7,}/;
-                const extraStrong = /(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?]).{9,}/;
-
-                progressInput.addEventListener('input', function() {
-                    const threshold = 10; // Número de caracteres que llenan la barra al 100%
-                    const inputLength = progressInput.value.length;
-
-                    // Calcula el progreso basado en la longitud del texto
-                    let progress = 0;
-                    if (inputLength >= threshold) {
-                        progress = 100;
-                    } else {
-                        progress = (inputLength / threshold) * 100;
-                    }
-
-                    // Actualiza el ancho y el atributo aria-valuenow de la barra de progreso
-                    progressBar.style.width = progress + '%';
-                    progressBar.setAttribute('aria-valuenow', progress);
-
-                    // Elimina las clases actuales
-                    progressBar.classList.remove("bg-success", "bg-warning", "bg-danger");
-
-                    // Determina la fortaleza de la contraseña y cambia la clase en consecuencia
-                    const value = progressInput.value;
-                    if (extraStrong.test(value)) {
-                        progressBar.classList.add("bg-success"); // Verde para contraseñas muy fuertes
-                        progressBar.textContent = "Segura"; // Texto: Segura
-                    } else if (strong.test(value)) {
-                        progressBar.classList.add("bg-warning"); // Amarillo para contraseñas fuertes
-                        progressBar.textContent = "Moderada"; // Texto: Moderada
-                    } else if (moderate.test(value)) {
-                        progressBar.classList.add("bg-danger"); // Rojo para contraseñas moderadas
-                        progressBar.textContent = "Débil"; // Texto: Débil
-                    } else {
-                        progressBar.classList.add("bg-danger"); // Rojo para contraseñas débiles o vacías
-                        progressBar.textContent = "Débil"; // Texto: Débil
-                    }
-                });
-            });
+        <script src="../../js/password/validacion.js">
         </script>
 
         <script>
@@ -432,13 +389,15 @@ include '../../../src/controllers/registro_usuarios_be.php';
                 });
             });
         </script>
-        
+
         <script>
-                window.addEventListener("scroll", function() {
-                    const header = document.querySelector("header");
-                    header.classList.toggle("sticky", window.scrollY > 0);
-                });
-            </script>
+            window.addEventListener("scroll", function() {
+                const header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        </script>
+        <script src="../../js/loader.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="../../js/user_register_front.js"></script>

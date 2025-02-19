@@ -3,7 +3,7 @@
 const input1 = document.getElementById('dni1');
 const input2 = document.getElementById('dni2');
 
-input1.addEventListener('input', function() {
+input1.addEventListener('input', function () {
     // Actualizar el valor del segundo input
     input2.value = input1.value;
 });
@@ -11,29 +11,29 @@ input1.addEventListener('input', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {  
+document.addEventListener('DOMContentLoaded', function () {
     // Oculta los elementos al cargar la página  
-    const isChecked = document.getElementById('otroPaisCheckbox').checked;  
-    document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);  
-    document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);  
-    document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);  
-    document.getElementById('pais').classList.toggle('hidden', isChecked);  
-    document.getElementById('otropais').classList.add('hidden');  
+    const isChecked = document.getElementById('otroPaisCheckbox').checked;
+    document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);
+    document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);
+    document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);
+    document.getElementById('pais').classList.toggle('hidden', isChecked);
+    document.getElementById('otropais').classList.add('hidden');
 
     // Verifica si la provincia es Buenos Aires al cargar la página
     handleProvinceChange();
-});  
+});
 
-document.getElementById('otroPaisCheckbox').addEventListener('change', function() {  
-    const isChecked = this.checked;  
-    document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);  
-    document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);  
-    document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);  
-    document.getElementById('pais').classList.toggle('hidden', isChecked);  
+document.getElementById('otroPaisCheckbox').addEventListener('change', function () {
+    const isChecked = this.checked;
+    document.getElementById('provinciaDiv').classList.toggle('hidden', isChecked);
+    document.getElementById('municipalidadDiv').classList.toggle('hidden', isChecked);
+    document.getElementById('localidadDiv').classList.toggle('hidden', isChecked);
+    document.getElementById('pais').classList.toggle('hidden', isChecked);
 
-    const otroPais = document.getElementById("otropais");  
-    otroPais.classList.add("hidden");  
-    otroPais.classList.toggle('hidden', !isChecked);  
+    const otroPais = document.getElementById("otropais");
+    otroPais.classList.add("hidden");
+    otroPais.classList.toggle('hidden', !isChecked);
 });
 
 // Función para manejar el cambio de provincia
@@ -67,27 +67,29 @@ function handleMunicipalityChange() {
     }
 }
 
-document.getElementById('searchButton').addEventListener('click', function() {
+document.getElementById('searchButton').addEventListener('click', function () {
     geocodeAddress();
 });
 
 let map;
-let geocoder;
 let marker;
 
+// Inicializa el mapa
 function initMap() {
-    geocoder = new google.maps.Geocoder();
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.6037, lng: -58.3816 }, // Coordenadas de Buenos Aires
-        zoom: 12, // Ajusta el nivel de zoom
-        mapTypeId: 'satellite' // Establece la vista de satélite
-    });
-    marker = new google.maps.Marker({
-        map: map
-    });
+    map = L.map('map').setView([-34.6037, -58.3816], 12); // Coordenadas de Buenos Aires y zoom
+
+    // Agregar la capa de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Agregar marcador inicial (opcional)
+    marker = L.marker([-34.6037, -58.3816]).addTo(map)
+        .bindPopup("Ubicación Inicial")
+        .openPopup();
 }
 
-
+// Función para geolocalizar la dirección
 function geocodeAddress() {
     const calle = document.getElementById('calle').value.trim();
     const entreCalle = document.getElementById('entreCalle').value.trim();
@@ -95,33 +97,36 @@ function geocodeAddress() {
     const localidadSelect = document.getElementById('loc_id');
     const localidad = localidadSelect.options[localidadSelect.selectedIndex].text;
 
-    if (calle && entreCalle && altura && localidad) {
-        const address = `${calle} ${altura}, ${localidad}`;
-        geocoder.geocode({ address: address }, function(results, status) {
-            if (status === 'OK') {
-                map.setCenter(results[0].geometry.location);
-                marker.setPosition(results[0].geometry.location);
-                map.setZoom(15);
-            } else {
-                alert('No se pudo encontrar la dirección: ' + status);
-            }
-        });
+    if (calle && altura && localidad) {
+        const address = `${calle} ${altura}, ${localidad}, Argentina`;
+
+        // Usamos el servicio de geocodificación de OpenStreetMap (Nominatim)
+        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    const lat = parseFloat(data[0].lat);
+                    const lon = parseFloat(data[0].lon);
+
+                    // Mover el mapa a la nueva ubicación
+                    map.setView([lat, lon], 15);
+
+                    // Mover el marcador
+                    marker.setLatLng([lat, lon])
+                        .bindPopup(`Ubicación: ${address}`)
+                        .openPopup();
+                } else {
+                    alert('No se pudo encontrar la dirección.');
+                }
+            })
+            .catch(error => {
+                console.error("Error al geocodificar: ", error);
+                alert('Error al obtener la ubicación.');
+            });
     } else {
         alert('Por favor, complete todos los campos.');
     }
 }
 
-// Inicializa el mapa al cargar la página
+// Llamar a initMap al cargar la página
 window.onload = initMap;
-
-function mostrarContrasena(){
-    var tipo = document.getElementById("password");
-    if(tipo.type == "password"){
-        tipo.type = "text";
-    }else{
-        tipo.type = "password";
-    }
-}
-
-
-
