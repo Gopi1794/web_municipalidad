@@ -5,6 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi San Vicente</title>
+    <meta property="og:title" content="Mi San Vicente">
+    <meta property="og:description" content="Gestion de persona de la Municipalidad de San Vicente.">
+    <meta property="og:image" content="https://webmunicipal.online/public/img/logos_sanvicente/logo_misanvicente.png">
+    <meta property="og:url" content="https://webmunicipal.online/public/misanvicente/ciudadano/index.php">
+    <meta property="og:type" content="website">
+
+    <meta name="description" content="Sistema de gestión de personas de la Municipalidad de San Vicente. Accede a la administración y gestión de trámites.">
+    <meta name="keywords" content="San Vicente, Municipalidad, gestión, trámites, gobierno">
+    <meta name="author" content="Municipalidad de San Vicente">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+
+    <!-- Apple Touch Icon (para iOS) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../../favicon/android-chrome-512x512.png">
+
+
+    <!-- Twitter Card (para Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mi San Vicente">
+    <meta name="twitter:description" content="Gestion de persona de la Municipalidad de San Vicente.">
+    <meta name="twitter:image" content="https://webmunicipal.online/public/img/logos_sanvicente/logo_misanvicente.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE38TW45ZY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TE38TW45ZY');
+    </script>
     <link rel="stylesheet" href="../../css/style-register.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
